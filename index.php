@@ -214,7 +214,7 @@
                     <div class="col-md-3">
                         <div class="card box">
                             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/pic1.jpg" class="img-fluid" />
+                                <img src="img/construction.jpg" class="img-fluid" />
                                 <a href="#!">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
@@ -230,7 +230,7 @@
                     <div class="col-md-3">
                         <div class="card box">
                             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/pic1.jpg" class="img-fluid" />
+                                <img src="img/school.jpg" class="img-fluid" />
                                 <a href="#!">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
