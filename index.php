@@ -8,15 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <!--Google Fonts-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- End Bootstrap CSS -->
 
@@ -30,8 +27,7 @@
 
     <!--Header Start-->
     <header>
-        <section id="topbar"
-            class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bg-primary text-white topbar-transparent">
+        <section id="topbar" class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bg-primary text-white topbar-transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6   text-start">
@@ -39,8 +35,7 @@
                         <i class="bi bi-clock"></i> Mon-Sat: 8:00 AM - 6:00 PM
                     </div>
                     <div class="col-md-6 text-end">
-                        Call us: <span class="px-3"><i class="bi bi-phone "></i> <a href="tel:+251921379660"
-                                style="color: #fff;"> +251 921-379660</a></span>
+                        Call us: <span class="px-3"><i class="bi bi-phone "></i> <a href="tel:+251921379660" style="color: #fff;"> +251 921-379660</a></span>
                     </div>
                 </div>
             </div>
@@ -49,11 +44,10 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                    <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
+
+                    <img src="img/logo.JPG" alt="" width="70px" height="70px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -91,12 +85,9 @@
 
     <div id="carouselExampleCaptions" class="carousel slide mb-3" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -126,13 +117,11 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -187,79 +176,38 @@
         <!----------- About End---------->
 
         <!----------- Work With Us Start --------->
-        <section>
-            <div class="container course pb-5 pt-5">
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Now We Are Ready To Give Our Services For
-                </h2>
-                <!--Section description-->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card box">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/pic1.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Hotels</h5>
-                                <p class="card-text">By providing 24 hr./12 hr. our health care service and visit
-                                    program to hotel guests, to increase customer satisfaction by decreasing unnecessary
-                                    visit to clinics and hospital, unless it's indicated.</p>
-                                <a href="#!" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
+        <section class="container">
+            <div class="card-deck mb-5">
+                <div class="card">
+                <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                    <div class="card-body">
+                        <h1 class="text-center"><i class="fa fa-duotone fa-hotel"></i></h1>
+                        <h3 class="card-title text-center">Hotels</h3>
+                        <p class="card-text">By providing 24 hr./12 hr. our health care service and visit program to hotel guests, to increase customer satisfaction by decreasing unnecessary visit to clinics and hospital, unless it's indicated.</p>
                     </div>
-
-                    <div class="col-md-3">
-                        <div class="card box">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/construction.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Construction Sites</h5>
-                                <p class="card-text">Helps employees to have a health working environment, by improving
-                                    working safety and gave them a first Aid by our health professional.</p>
-                                <a href="#!" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
+                </div>
+                <div class="card">
+                <img class="card-img-top" src="img/construction.jpg" height=240 alt="Card image cap">
+                    <div class="card-body">
+                    <h1 class="text-center"><i class="fa fa-duotone fa-person-digging"></i></h1>
+                        <h3 class="card-title text-center">Construction Sites</h3>
+                        <p class="card-text">Helps employees to have a health working environment, by improving working safety and gave them a first Aid by our health professional.</p>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card box">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/school.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Schools</h5>
-                                <p class="card-text">By assigning health professionals, improve the school compound to
-                                    be healthier, safer and risk free, incase if there need for assistance, the nurse
-                                    will give care to the child, if the condition is worse need for a better health
-                                    facility, the nurse will assist with the escort.</p>
-                                <a href="#!" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
+                </div>
+                <div class="card">
+                <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                    <div class="card-body">
+                    <h1 class="text-center"><i class="fa fa-duotone fa-school"></i></h1>
+                        <h3 class="card-title text-center">Schools</h3>
+                        <p class="card-text">By assigning health professionals, improve the school compound to be healthier, safer and risk free, incase if there need for assistance, the nurse will give care to the child, if the condition is worse need for a better health facility, the nurse will assist with the escort.</p>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card box">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/pic1.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Other Governmental and NGO Offices</h5>
-                                <p class="card-text">Our doors are wide open to any organization willing to work with
-                                    us!</p>
-                                <a href="#!" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
+                </div>
+                <div class="card">
+                <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                    <div class="card-body">
+                    <h1 class="text-center"><i class="fa fa-duotone fa-building-ngo"></i></h1>
+                        <h3 class="card-title text-center">Other Governmental and NGO offices</h3>
+                        <p class="card-text">Our doors are wide open to any organization willing to work with us!</p>
                     </div>
                 </div>
             </div>
@@ -350,94 +298,74 @@
         </section>
         <!------Testimonials End-->
         <!------Contact Us Start-->
-        <section id="contact">
-            <div class="container mb-5">
+        <section id="contact" class="container">
+            <div class="row  pt-5 pb-5">
                 <!--Section: Contact v.2-->
-                <section class="mb-4">
+                <div class="header">
+                    <h1 class="h1-responsive font-weight-bold text-center">Contact us</h1>
+                    <p class="text-center w-responsive">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
 
                     <!--Section heading-->
-                    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+
                     <!--Section description-->
-                    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate
-                        to contact us directly. Our team will come back to you within
-                        a matter of hours to help you.</p>
 
-                    <div class="row">
 
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-md-0 mb-5">
-                            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <div class="container">
 
-                                <!--Grid row-->
-                                <div class="row">
-
-                                    <!--Grid column-->
-                                    <div class="col-md-6">
-                                        <div class="md-form mb-0">
-                                            <input type="text" id="name" name="name" class="form-control">
-                                            <label for="name" class="">Your name</label>
-                                        </div>
-                                    </div>
-                                    <!--Grid column-->
-
-                                    <!--Grid column-->
-                                    <div class="col-md-6">
-                                        <div class="md-form mb-0">
-                                            <input type="text" id="email" name="email" class="form-control">
-                                            <label for="email" class="">Your email</label>
-                                        </div>
-                                    </div>
-                                    <!--Grid column-->
-
-                                </div>
-                                <!--Grid row-->
-
-                                <!--Grid row-->
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="md-form mb-0">
-                                            <input type="text" id="subject" name="subject" class="form-control">
-                                            <label for="subject" class="">Subject</label>
-                                        </div>
+                        <form name="submit-to-google-sheet">
+                            <div class="row form-body">
+                                <div class="department col-md-12 col-lg-12 col-sm-12 col-xs-12 mb-4">
+                                    <div class="btn-group btn-group-toggle d-flex justify-content-center" data-toggle="buttons">
+                                        <label class="btn btn-secondary  active" id="managerlbl" style="background-color: #0d6efd;">
+                                            <input type="checkbox" name="General Manager" id="manager" onchange="sendToManager()"> General Manager
+                                        </label>
+                                        <label class="btn btn-secondary " id="financelbl" style="background-color: #0d6efd;">
+                                            <input type="checkbox" name="finance" id="finance" onchange="sendToFinance()"> Finance
+                                        </label>
+                                        <label class="btn btn-secondary" id="marketinglbl" style="background-color: #0d6efd;">
+                                            <input type="checkbox" name="marketing" id="marketing" onchange="sendToMarketing()"> Marketing
+                                        </label>
                                     </div>
                                 </div>
-                                <!--Grid row-->
-
-                                <!--Grid row-->
-                                <div class="row">
-
-                                    <!--Grid column-->
-                                    <div class="col-md-12">
-
-                                        <div class="md-form">
-                                            <textarea type="text" id="message" name="message" rows="2"
-                                                class="form-control md-textarea"></textarea>
-                                            <label for="message">Your message</label>
-                                        </div>
-
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 my-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" class="form-control" placeholder="Your Name" name="Name" required>
                                     </div>
                                 </div>
-                                <!--Grid row-->
+                                <div class="col-md-6 col-sm-12 col-xs-12 my-2">
+                                    <div class="md-form mb-0">
+                                        <input type="email" class="form-control" placeholder="Your Email" name="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 my-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" class="form-control" placeholder="Subject" name="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 my-2">
+                                    <div class="md-form mb-0">
+                                        <textarea name="Message" rows="6" class="form-control" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
 
-                            </form>
 
-                            <div class="text-center text-md-left">
-                                <a class="btn btn-primary"
-                                    onclick="document.getElementById('contact-form').submit();">Send</a>
                             </div>
-                            <div class="status"></div>
-                        </div>
-                        <!--Grid column-->
+                            <div class="col-mg-12 d-flex justify-content-center">
+                            <button type="submit" class="btn-primary bg-primary w-25 my-3 contact-btn">Submit</button>
+                            </div>
+                            
+                        </form>
 
-                        <!--Grid column-->
-                        <div class="col-md-6 text-center">
-
-                        </div>
-                        <!--Grid column-->
+                        <span id="msg" class="text-center w-responsive"></span>
 
                     </div>
 
-                </section>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 map-wrapper">
+                    <iframe style="border: 2px solid rgba(75, 222, 248, 0.3);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d492.5572604620103!2d38.799707943085544!3d9.0219091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85b7aa760beb%3A0xad413f6b252f0de2!2sMirkuz%20home%20based%20health%20care%20service!5e0!3m2!1sen!2set!4v1675244417570!5m2!1sen!2set" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <!--Section: Contact v.2-->
             </div>
         </section>
@@ -474,27 +402,27 @@
                             <!-- Links -->
                             <div class="row">
                                 <div class="col-md-2">
-                                    <h3><a href="facebook.com/mirkuzhc" class="me-4 text-reset">
+                                    <h3><a href="http://www.facebook.com/mirkuzhc" class="me-4 text-reset">
                                             <i class="bi bi-facebook"></i>
                                         </a></h3><br>
                                 </div>
                                 <div class="col-md-2">
-                                    <h3><a href="twitter.com" class="me-4 text-reset">
+                                    <h3><a href="http://www.twitter.com" class="me-4 text-reset">
                                             <i class="bi bi-twitter"></i>
                                         </a></h3><br>
                                 </div>
                                 <div class="col-md-2">
-                                    <h3><a href="gmail.com" class="me-4 text-reset">
+                                    <h3><a href="http://www.gmail.com" class="me-4 text-reset">
                                             <i class="bi bi-google"></i>
                                         </a></h3><br>
                                 </div>
                                 <div class="col-md-2">
-                                    <h3><a href="instagram.com" class="me-4 text-reset">
+                                    <h3><a href="http://www.instagram.com" class="me-4 text-reset">
                                             <i class="bi bi-instagram"></i>
                                         </a></h3><br>
                                 </div>
                                 <div class="col-md-2">
-                                    <h3><a href="linkedin.com" class="me-4 text-reset">
+                                    <h3><a href="http://www.linkedin.com" class="me-4 text-reset">
                                             <i class="bi bi-linkedin"></i>
                                         </a></h3><br>
                                 </div>
@@ -512,11 +440,9 @@
                                 <i class="bi bi-envelope me-3"></i>
                                 mirkuzhc@gmail.com
                             </p>
-                            <p><i class="bi bi-phone me-3"></i><a href="tel:+251921379660"
-                                    style="color: #fff; text-decoration:none;">
+                            <p><i class="bi bi-phone me-3"></i><a href="tel:+251921379660" style="color: #fff; text-decoration:none;">
                                     +251 921-379660</a></p>
-                            <p><i class="bi bi-print me-3"></i><a href="tel:+251966020039"
-                                    style="color: #fff; text-decoration:none;">
+                            <p><i class="bi bi-print me-3"></i><a href="tel:+251966020039" style="color: #fff; text-decoration:none;">
                                     +251 966-020039</a></p>
                         </div>
                         <!-- Grid column -->
@@ -534,12 +460,74 @@
         </footer>
         <!--=============Footer End=============-->
         <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
+        <script>
+            var scriptURL;
+
+            function sendToManager() {
+                if (document.getElementById("manager").checked) {
+                    scriptURL = 'https://script.google.com/macros/s/AKfycbz9x66_ZM4iHeo7Kc616Hl_DptghgZq66DQg8_udAcPLxZr1XYWctzof3T2IiMiriRdpg/exec';
+
+                    document.getElementById("managerlbl").style.backgroundColor = "#100f36";
+                    document.getElementById("managerlbl").style.fontWeight = 700;
+                } else {
+                    document.getElementById("managerlbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("managerlbl").style.fontWeight = 400;
+                }
+
+            }
+
+            function sendToFinance() {
+                if (document.getElementById("finance").checked) {
+                    scriptURL = 'finan';
+                    document.getElementById("financelbl").style.backgroundColor = "#100f36";
+                    document.getElementById("financelbl").style.fontWeight = 700;
+                } else {
+                    document.getElementById("financelbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("financelbl").style.fontWeight = 400;
+                }
+            }
+
+            function sendToMarketing() {
+                if (document.getElementById("marketing").checked) {
+                    scriptURL = 'market';
+                    document.getElementById("marketinglbl").style.backgroundColor = "#100f36";
+                    document.getElementById("marketinglbl").style.fontWeight = 700;
+                } else {
+                    document.getElementById("marketinglbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("marketinglbl").style.fontWeight = 400;
+                }
+            }
+
+
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function() {
+                            msg.innerText = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => {
+                        msg.innerHTML = "Error while sending message!"
+                        setTimeout(function() {
+                            msg.innerText = ""
+                        }, 5000)
+                        form.reset()
+                    })
+            })
+        </script>
 </body>
 
 </html>
