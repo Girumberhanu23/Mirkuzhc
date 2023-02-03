@@ -73,8 +73,11 @@ $conn = null;
   </style>
 </head>
 
-<body>
-    <body>
+<body
+style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/firstAid.jpg) !important;
+background-size: cover !important;
+background-attachment:fixed !important;">
+    
         <!--=============Header Start=============-->
         <header>
           <section id="topbar"
@@ -136,12 +139,11 @@ $conn = null;
       <!--=============Header End=============-->
       <!--=============Form Start=============-->
       <section>
-        <div class="inner-layer">
-          <div class="container">
+          <div class="container-fluid">
             <div class="row no-margin">
-              <div class="col-sm-7">
+              <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                 <div class="content">
-                  <h1>Book You Slot Now and Save your time</h1>
+                  <h1>Book Your Appointment with Us!</h1>
                   <p>We are ready to take your appointment. Book with us by filling out the following form. </p>
                   <h3>For Help Call : <a href="tel:+251921379660" style="color: #fff; text-decoration:none;">
                     +251 921-379660</a><br>
@@ -149,13 +151,14 @@ $conn = null;
                       +251 966-020039</a></h3>
                 </div>
               </div>
-              <div class="col-sm-5">
-              <form class="form-login" action="book.php" method="post">
-                  <div class="form-data">
+              <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 ">
+              <form class="form-login " action="book.php" method="post">
+                  <div class="form-data rounded bg-transparent" style="box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);">
                     <div class="form-head">
-                      <h1>Book Appointemnt</h1>
+                      <h1>Book Appointment</h1>
                     </div>
                     <div class="form-body">
+                    <h6>Personal Details</h6>
                       <div class="row form-row">
                         <input type="text" placeholder="Enter Full name" name="name" class="form-control" required>
                       </div>
@@ -204,7 +207,7 @@ $conn = null;
                           <input type="number" name="house" id="house" placeholder="Enter House Number" class="form-control">
                         </div>
                         <div class="col-sm-6">
-                          <input type="text" placeholder="Postal Code" name="postal" class="form-control">
+                          <input type="text" placeholder="Passport Number" name="license" class="form-control">
                         </div>
                       </div>
       
@@ -220,11 +223,9 @@ $conn = null;
               </div>
             </div>
           </div>
-        </div>
     </section>
       <!--=============Form End=============-->
       
-      </body>
       
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -316,16 +316,19 @@
 
                         <form name="submit-to-google-sheet">
                             <div class="row form-body">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <p class="text-center">Who would you like to contact?</p>
+                                </div>
                                 <div class="department col-md-12 col-lg-12 col-sm-12 col-xs-12 mb-4">
                                     <div class="btn-group btn-group-toggle d-flex justify-content-center" data-toggle="buttons">
                                         <label class="btn btn-secondary  active" id="managerlbl" style="background-color: #0d6efd;">
-                                            <input type="checkbox" name="General Manager" id="manager" onchange="sendToManager()"> General Manager
+                                            <input type="radio" name="department" value="General Manager" id="manager" onchange="sendToManager()"> General Manager
                                         </label>
                                         <label class="btn btn-secondary " id="financelbl" style="background-color: #0d6efd;">
-                                            <input type="checkbox" name="finance" id="finance" onchange="sendToFinance()"> Finance
+                                            <input type="radio" name="department" value="finance" id="finance" onchange="sendToFinance()" checked> Finance
                                         </label>
                                         <label class="btn btn-secondary" id="marketinglbl" style="background-color: #0d6efd;">
-                                            <input type="checkbox" name="marketing" id="marketing" onchange="sendToMarketing()"> Marketing
+                                            <input type="radio" name="department" value="marketing" id="marketing" onchange="sendToMarketing()"> Marketing
                                         </label>
                                     </div>
                                 </div>
@@ -382,7 +385,7 @@
                     <!-- Grid row -->
                     <div class="row mt-3">
                         <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold mb-4">
                                 <i class="bi bi-gem me-3"></i>Mirkuz HC
@@ -401,27 +404,27 @@
                         <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
                             <!-- Links -->
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                                     <h3><a href="http://www.facebook.com/mirkuzhc" class="me-4 text-reset">
                                             <i class="bi bi-facebook"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                                     <h3><a href="http://www.twitter.com" class="me-4 text-reset">
                                             <i class="bi bi-twitter"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                                     <h3><a href="http://www.gmail.com" class="me-4 text-reset">
                                             <i class="bi bi-google"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                                     <h3><a href="http://www.instagram.com" class="me-4 text-reset">
                                             <i class="bi bi-instagram"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                                     <h3><a href="http://www.linkedin.com" class="me-4 text-reset">
                                             <i class="bi bi-linkedin"></i>
                                         </a></h3><br>
@@ -473,11 +476,11 @@
 
                     document.getElementById("managerlbl").style.backgroundColor = "#100f36";
                     document.getElementById("managerlbl").style.fontWeight = 700;
-                } else {
-                    document.getElementById("managerlbl").style.backgroundColor = "#0d6efd";
-                    document.getElementById("managerlbl").style.fontWeight = 400;
+                    document.getElementById("financelbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("financelbl").style.fontWeight = 400;
+                    document.getElementById("marketinglbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("marketinglbl").style.fontWeight = 400;
                 }
-
             }
 
             function sendToFinance() {
@@ -485,9 +488,10 @@
                     scriptURL = 'finan';
                     document.getElementById("financelbl").style.backgroundColor = "#100f36";
                     document.getElementById("financelbl").style.fontWeight = 700;
-                } else {
-                    document.getElementById("financelbl").style.backgroundColor = "#0d6efd";
-                    document.getElementById("financelbl").style.fontWeight = 400;
+                    document.getElementById("managerlbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("managerlbl").style.fontWeight = 400;
+                    document.getElementById("marketinglbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("marketinglbl").style.fontWeight = 400;
                 }
             }
 
@@ -496,9 +500,10 @@
                     scriptURL = 'market';
                     document.getElementById("marketinglbl").style.backgroundColor = "#100f36";
                     document.getElementById("marketinglbl").style.fontWeight = 700;
-                } else {
-                    document.getElementById("marketinglbl").style.backgroundColor = "#0d6efd";
-                    document.getElementById("marketinglbl").style.fontWeight = 400;
+                    document.getElementById("managerlbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("managerlbl").style.fontWeight = 400;
+                    document.getElementById("financelbl").style.backgroundColor = "#0d6efd";
+                    document.getElementById("financelbl").style.fontWeight = 400;
                 }
             }
 

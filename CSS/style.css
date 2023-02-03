@@ -267,6 +267,11 @@ header nav ul .nav-item .active {
   color: #ffcf88;
 }
 ------*/
+/*--------------- Book Appointment -------------- */
+.form-data{
+  background-color: red;
+}
+
 .testimonial {
   margin-top: 15%;
 }
