@@ -6,11 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Mirkuz Home Care</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,91 +43,54 @@
             </div>
         </section>
         <!--Navbar Start-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">
-
-                    <img src="img/logo.JPG" alt="" width="70px" height="70px">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="bi bi-list"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="book.php">Book Appointment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php#contact">Contact us</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
-                        <li class="nav-item">
-                            <a class="nav-link " href="login.php">
-                                <i class="bi bi-person "></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       
         <!--Navbar End-->
     </header>
     <!--Header End-->
 
+    <section id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                     <a class="navbar-brand theme-text" href="index.php#header">
+                     <img src="img/logo.JPG" alt="" width="70px" height="70px">
+                        &nbsp;Mirkuz hc</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link act" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Our Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
 
-    <div id="carouselExampleCaptions" class="carousel slide mb-3" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="img-fluid w-100 h-100 overflow-hidden" src="img/image.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-block">
-                    <h5>MIRKUZ HOME BASED HEALTH CARE PLC</h5>
-                    <p>We are experienced health professionals strive to improve home based health care in Ethiopia
-                        where family and loved ones are cared at their home eliminating complication that comes from
-                        unwanted hospital stay and expense.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img class="img-fluid w-100 h-100 overflow-hidden" src="img/image2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-block">
-                    <h5>MIRKUZ HOME BASED HEALTH CARE PLC</h5>
-                    <p>Currently the company created a job employment opportunity for more than 25 workers. Our Nurses
-                        are qualified, through a proper training with full medical equipment’s in our company, in
-                        addition to their college or university knowledge for a better home care skill.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="img-fluid w-100 h-100 overflow-hidden" src="img/image3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-block">
-                    <h5>MIRKUZ HOME BASED HEALTH CARE PLC</h5>
-                    <p>We aspire to establish a Home Care center for clients, for giving them a care in our center
-                        instead of their Home.</p>
-                </div>
+            </nav>
+            <!-- navbar code -->
+            <div class="middle">
+                <h3 class="text-white display-3 fw-bold">Building a Healthy Community  <span class="theme-text">One Individual at a Time.</span>.<span class="theme-text">.</span></h3>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,192L60,181.3C120,171,240,149,360,133.3C480,117,600,107,720,106.7C840,107,960,117,1080,122.7C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    
 
 
 
@@ -177,126 +142,60 @@
 
         <!----------- Work With Us Start --------->
         <section class="container">
-            <div class="card-deck mb-5">
-                <div class="card">
-                <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
-                    <div class="card-body">
-                        <h1 class="text-center"><i class="fa fa-duotone fa-hotel"></i></h1>
-                        <h3 class="card-title text-center">Hotels</h3>
-                        <p class="card-text">By providing 24 hr./12 hr. our health care service and visit program to hotel guests, to increase customer satisfaction by decreasing unnecessary visit to clinics and hospital, unless it's indicated.</p>
-                    </div>
-                </div>
-                <div class="card">
-                <img class="card-img-top" src="img/construction.jpg" height=240 alt="Card image cap">
-                    <div class="card-body">
-                    <h1 class="text-center"><i class="fa fa-duotone fa-person-digging"></i></h1>
-                        <h3 class="card-title text-center">Construction Sites</h3>
-                        <p class="card-text">Helps employees to have a health working environment, by improving working safety and gave them a first Aid by our health professional.</p>
-                    </div>
-                </div>
-                <div class="card">
-                <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
-                    <div class="card-body">
-                    <h1 class="text-center"><i class="fa fa-duotone fa-school"></i></h1>
-                        <h3 class="card-title text-center">Schools</h3>
-                        <p class="card-text">By assigning health professionals, improve the school compound to be healthier, safer and risk free, incase if there need for assistance, the nurse will give care to the child, if the condition is worse need for a better health facility, the nurse will assist with the escort.</p>
-                    </div>
-                </div>
-                <div class="card">
-                <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
-                    <div class="card-body">
-                    <h1 class="text-center"><i class="fa fa-duotone fa-building-ngo"></i></h1>
-                        <h3 class="card-title text-center">Other Governmental and NGO offices</h3>
-                        <p class="card-text">Our doors are wide open to any organization willing to work with us!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!------Work with Us End-->
-        <!------Testimonials Start------>
-        <section>
             <div class="row">
-                <div class="col-md-12">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="single-box">
-                                            <div class="img-area"><img src="img/test.jpg" alt=""></div>
-                                            <div class="img-text">
-                                                <h2>Person One</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet
-                                                    eveniet id, ullam earum optio.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-box">
-                                            <div class="img-area"><img src="img/test.jpg" alt=""></div>
-                                            <div class="img-text">
-                                                <h2>Person Two</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet
-                                                    eveniet id, ullam earum optio.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-box">
-                                            <div class="img-area"><img src="img/test.jpg" alt=""></div>
-                                            <div class="img-text">
-                                                <h2>Person Three</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet
-                                                    eveniet id, ullam earum optio.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="single-box">
-                                            <div class="img-area"><img src="img/test.jpg" alt=""></div>
-                                            <div class="img-text">
-                                                <h2>Person Four</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet
-                                                    eveniet id, ullam earum optio.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-box">
-                                            <div class="img-area"><img src="img/test.jpg" alt=""></div>
-                                            <div class="img-text">
-                                                <h2>Person Five</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet
-                                                    eveniet id, ullam earum optio.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-box">
-                                            <div class="img-area"><img src="img/test.jpg" alt=""></div>
-                                            <div class="img-text">
-                                                <h2>Person Six</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet
-                                                    eveniet id, ullam earum optio.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="card-deck mb-5">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                            <div class="card-body">
+                                <h1 class="text-center"><i class="fa fa-duotone fa-hotel"></i></h1>
+                                <h3 class="card-title text-center">Hotels</h3>
+                                <p class="card-text">By providing 24 hr./12 hr. our health care service and visit program to hotel guests, to increase customer satisfaction by decreasing unnecessary visit to clinics and hospital, unless it's indicated.</p>
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top" src="img/construction.jpg" height=240 alt="Card image cap">
+                            <div class="card-body">
+                                <h1 class="text-center"><i class="fa fa-duotone fa-person-digging"></i></h1>
+                                <h3 class="card-title text-center">Construction Sites</h3>
+                                <p class="card-text">Helps employees to have a health working environment, by improving working safety and gave them a first Aid by our health professional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                            <div class="card-body">
+                                <h1 class="text-center"><i class="fa fa-duotone fa-school"></i></h1>
+                                <h3 class="card-title text-center">Schools</h3>
+                                <p class="card-text">By assigning health professionals, improve the school compound to be healthier, safer and risk free, incase if there need for assistance, the nurse will give care to the child, if the condition is worse need for a better health facility, the nurse will assist with the escort.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                            <div class="card-body">
+                                <h1 class="text-center"><i class="fa fa-duotone fa-building-ngo"></i></h1>
+                                <h3 class="card-title text-center">Other Governmental and NGO offices</h3>
+                                <p class="card-text">Our doors are wide open to any organization willing to work with us!</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </section>
+        <!------Work with Us End-->
+
+        <!------Testimonials Start------>
+        
         <!------Testimonials End-->
+
         <!------Contact Us Start-->
         <section id="contact" class="container">
             <div class="row  pt-5 pb-5">
@@ -356,9 +255,9 @@
 
                             </div>
                             <div class="col-mg-12 d-flex justify-content-center">
-                            <button type="submit" class="btn-primary bg-primary w-25 my-3 contact-btn">Submit</button>
+                                <button type="submit" class="btn-primary bg-primary w-25 my-3 contact-btn">Submit</button>
                             </div>
-                            
+
                         </form>
 
                         <span id="msg" class="text-center w-responsive"></span>
@@ -457,7 +356,7 @@
 
             <!-- Copyright -->
             <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2022 Copyright: Balageru Inc.
+                © 2023 Copyright: Nano Technologies Inc.
             </div>
             <!-- Copyright -->
         </footer>
@@ -466,7 +365,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
         <script>
             var scriptURL;
 

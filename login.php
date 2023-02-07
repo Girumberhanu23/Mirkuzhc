@@ -4,16 +4,16 @@ if (isset($_POST["submit"])) {
     if($_POST["username"]== "" or $_POST["email"]== "" or $_POST["password"]== ""){
         echo "<center><h1>Username, Email and Password cannot be empty ...!</h1></center>";
     }else{
-        $name = trim($_POST["name"]);
-        $username = strip_tags(trim($_POST["name"]));
-        $password = strip_tags(trim($_POST["password"]));
+        
+        $email = strip_tags(trim($_POST["email"]));
+        $password = strip_tags(trim($_POST["pwd"]));
 
         $query=$db->prepare("SELECT * FROM user WHERE email=? AND password=?");
         $query->execute(array($email,$password));
         $control=$query->fetch(PDO::FETCH_OBJ);
         if($control>0){
             $_SESSION["username"]=$username;
-            header("Location:display.php");
+            header("location: Home.php");
         }
         echo "<center><h1>incorrect Password or Email...!</h1></center>";
     }
@@ -29,7 +29,7 @@ $conn = null;
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Login</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -120,14 +120,14 @@ $conn = null;
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Email address</label>
-                                    <input type="email" id="form2Example1" name="email" class="form-control" placeholder="E-mail" required/>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required/>
                                 </div>
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label " for="form2Example2">Password</label>
                                     <!-- Simple link -->
                                     <a href="#!" class="float-end text-primary">Forgot password?</a>
-                                    <input type="password" id="form2Example2" name="pwd" class="form-control"
+                                    <input type="password" id="pwd" name="pwd" class="form-control"
                                         placeholder="Password" required/>
                                 </div>
                                 <!-- 2 column grid layout for inline styling -->
@@ -241,7 +241,7 @@ $conn = null;
 
         <!-- Copyright -->
         <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2022 Copyright: Balageru Inc.
+            © 2023 Copyright: Nano Technologies Inc.
         </div>
         <!-- Copyright -->
     </footer>

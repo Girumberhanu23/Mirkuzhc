@@ -1,3 +1,12 @@
+/*google font*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
 body {
 
   background: #fff !important;
@@ -14,116 +23,59 @@ a {
 }
 
 /*****************************
-    NavBar
+    NavBar Start
 ******************************/
-header nav {
-  background: #fff;
-  box-shadow: 0px 0px 5px #4444;
+#header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(63, 62, 62, 0.7)),
+    url("../img/image3.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+:root {
+  --main-color: #e6b30e;
+}
+.act,
+.navbar ul li a:hover {
+  color: #0D6EFD !important;
+  border-bottom: 1px solid #0D6EFD;
+}
+.theme-text {
+  color: #0D6EFD !important;
 }
 
-header nav a.navbar-brand h2 {
-
-  color: var(--bs-orange);
+svg.wave {
+  position: absolute;
+  bottom: -70px;
+}
+.middle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 80vh;
+  width: 70%;
+}
+.middle h1 {
+  font-size: 70px;
 }
 
-header nav ul.action-menu .nav-item .nav-link {
-  margin: 0px 20px;
-  font-size: 18px;
-}
-header nav ul .nav-item .nav-link:hover {
-  background: rgba(75, 222, 248, 0.3);
-  border-radius: 20px;
-}
-header nav ul .nav-item .active {
-  background: rgba(75, 222, 248, 0.3);
-  border-radius: 20px;
-}
-.navbar-toggler {
-  outline: none !important;
-  outline-color: transparent !important;
-  padding: none !important;
-  border: none !important;
-  border-radius: none !important;
 
-}
 
-@media(max-width: 567px) {}
 
 /*****************************
-    Login Form
+    NavBar End
+******************************/
+
+/*****************************
+    Login Form Start
 ******************************/
 .form-login {
   bottom: 45% !important;
 }
 
 
-.carousel-item {
-  width: 100%;
-  height: 100vh !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.carousel-item::before {
-  content: '';
-  background-color: rgba(12, 11, 10, 0.5);
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.carousel-caption {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 40%;
-  left: 0;
-  right: 0;
-}
-
-
-
-.carousel-caption h5 {
-  color: #fff;
-  margin-bottom: 10px;
-  font-size: 42px;
-  font-weight: 700;
-  width: 80%;
-  margin: 0px auto 30px auto;
-}
-
-.carousel-caption p {
-
-  font-size: 20px;
-  width: 80%;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  margin: 0px auto 30px auto;
-}
-
-
-@media(max-width:768px) {
-  .carousel-caption h5 {
-    font-size: 38px;
-  }
-}
-
-@media(max-width:577px) {
-  .carousel-caption h5 {
-    font-size: 25px;
-
-  }
-
-  .carousel-caption p {
-    font-size: 13px;
-  }
-
-}
 
 .book {
   background: rgba(75, 222, 248, 0.5);
@@ -139,9 +91,14 @@ header nav ul .nav-item .active {
   text-decoration: none;
 }
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
+
+/*****************************
+    Login Form Start
+******************************/
+
+/*****************************
+    About Start
+******************************/
 
 #about .col-lg-7 {
   background: rgba(75, 222, 248, 0.3);
@@ -248,6 +205,9 @@ header nav ul .nav-item .active {
   }
 }
 
+/*****************************
+    About End
+******************************/
 
 /*------------
 .course .box {
@@ -268,68 +228,14 @@ header nav ul .nav-item .active {
 }
 ------*/
 /*--------------- Book Appointment -------------- */
-.form-data{
-  background-color: red;
-}
 
-.testimonial {
-  margin-top: 15%;
-}
 
-.img-text {
-  width: 100%;
-  height: 300px;
-  display: block;
-  text-align: center;
-  padding: 40% 5%;
-  background: #262626;
-  color: #fff;
-  border-radius: 15px;
-}
-
-.img-text h2 {
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.img-text p {
-  font-size: 14px;
-}
-
-.single-box {
-  position: relative;
-  margin-bottom: 30px;
-  align-items: center;
-}
-
-.img-area {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 5px solid #fff;
-  overflow: hidden;
-  top: 30px;
-  left: 170px;
-  border-radius: 50%;
-}
-
-.img-area img {
-  width: 100%;
-}
-
-.carousel-indicators li {
-  background: #000;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-}
-
-.carousel-indicators.active {
-  background: #fff;
-}
 /*================= Header End=================*/
-/*================= Services Start=================*/
+
+
+/*****************************
+    Services Start
+******************************/
 .services {
   padding: 50px 0;
 }
@@ -403,8 +309,16 @@ header nav ul .nav-item .active {
 
   height: 100%;
 }
-/*================= Services End=================*/
-/*================= About Us Start=================*/
+
+/*****************************
+    Services End
+******************************/
+
+
+/*****************************
+    About Us Start
+******************************/
+
 .about-1 h1 {
   color: black;
   font-weight: bold;
@@ -454,7 +368,14 @@ header nav ul .nav-item .active {
 .about-item:hover hr {
   transition: all 400ms ease-in-out;
 }
-/*================= About Us End=================*/
+
+/*****************************
+    About Us End
+******************************/
+
+/*****************************
+    Footer Start
+******************************/
 footer {
   background: #212226;
   padding: 20px;
@@ -463,10 +384,17 @@ footer {
 footer p {
   color: #fff;
 }
+
+/*****************************
+    Footer End
+******************************/
 /*================= Contact Us Start=================*/
 .form-row {
   size: 40px;
 }
 .map-wrapper{
   max-width: 700px;
+}
+sup {
+  color: red;
 }

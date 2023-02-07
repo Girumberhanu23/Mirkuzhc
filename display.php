@@ -19,7 +19,7 @@ include('conn.php');
 
     <!--Custom Css-->
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Admin</title>
+    <title>Admin Panel</title>
 </head>
 
 <body>
