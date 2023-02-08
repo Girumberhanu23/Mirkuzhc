@@ -196,7 +196,57 @@
     <!------Work with Us End-->
 
     <!------Testimonials Start------>
-
+    <section class="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-center m-auto text-center">
+                    <h1 class="text-center mt-5">Testimonials</h1>
+                    <hr class="mx-auto">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <h1 style="color: #0D6EFD !important;"><i class="fa-solid fa-quote-right"></i></h1>
+                                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
+                                    sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel,
+                                    semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius
+                                    nibh non aliquet.</p>
+                                <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <h1 style="color: #0D6EFD !important;"><i class="fa-solid fa-quote-right"></i></h1>
+                                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque
+                                    eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra
+                                    sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh,
+                                    facilisis gravida odio.</p>
+                                <p class="overview"><b>Dauglas McNun</b>, Financial Advisor</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <h1 style="color: #0D6EFD !important;"><i class="fa-solid fa-quote-right"></i></h1>
+                                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id
+                                    lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+                                    tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa.
+                                    Etiam hendrerit dolor eget rutrum.</p>
+                                <p class="overview"><b>Hellen Wright</b>, Athelete</p>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!------Testimonials End-->
 
     <!------Contact Us Start-->
@@ -223,11 +273,11 @@
                             </div>
                             <div class="department col-md-12 col-lg-12 col-sm-12 col-xs-12 mb-4">
                                 <div class="btn-group btn-group-toggle d-flex justify-content-center" data-toggle="buttons">
-                                    <label class="btn btn-secondary  active" id="managerlbl" style="background-color: #0d6efd;">
-                                        <input type="radio" name="department" value="General Manager" id="manager" onchange="sendToManager()"> General Manager
+                                    <label class="btn btn-secondary" id="managerlbl" style="background-color: #0d6efd;">
+                                        <input type="radio" name="department" value="General Manager" id="manager" onchange="sendToManager()" checked> General Manager
                                     </label>
                                     <label class="btn btn-secondary " id="financelbl" style="background-color: #0d6efd;">
-                                        <input type="radio" name="department" value="finance" id="finance" onchange="sendToFinance()" checked> Finance
+                                        <input type="radio" name="department" value="finance" id="finance" onchange="sendToFinance()"> Finance
                                     </label>
                                     <label class="btn btn-secondary" id="marketinglbl" style="background-color: #0d6efd;">
                                         <input type="radio" name="department" value="marketing" id="marketing" onchange="sendToMarketing()"> Marketing
@@ -375,7 +425,7 @@
         function sendToManager() {
             if (document.getElementById("manager").checked) {
                 scriptURL = 'https://script.google.com/macros/s/AKfycbz9x66_ZM4iHeo7Kc616Hl_DptghgZq66DQg8_udAcPLxZr1XYWctzof3T2IiMiriRdpg/exec';
-
+                document.getElementById("managerlbl").style.color = "#fff !important";
                 document.getElementById("managerlbl").style.backgroundColor = "#100f36";
                 document.getElementById("managerlbl").style.fontWeight = 700;
                 document.getElementById("financelbl").style.backgroundColor = "#0d6efd";
