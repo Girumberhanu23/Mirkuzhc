@@ -21,8 +21,7 @@ if (isset($_POST["submit"])) {
     $check = $conn->prepare("SELECT * FROM book WHERE email=?");
     $check->execute([$email]);
     if ($check->rowCount() > 0) {
-      $_SESSION['status']= "Email exists try another!";
-    
+      $_SESSION['status'] = "Email exists try another!";
     } else {
 
       try {
@@ -30,17 +29,15 @@ if (isset($_POST["submit"])) {
         if ($insert->execute([
           $name, $phone, $email, $date, $subcity, $city, $house, $passport, $service
         ])) {
-          $_SESSION['status']= "Appointment Added Successfully!";
-          header('Location: book.php#msg');
+          $_SESSION['status'] = "Appointment Added Successfully!";
+//          header('Location: book.php#msg');
         }
       } catch (PDOException $e) {
-        $_SESSION['status']= $e->getMessage();
-    
+        $_SESSION['status'] = $e->getMessage();
       }
     }
   } catch (PDOException $e) {
-    $_SESSION['status']= "error" . $e->getmessage();
-    
+    $_SESSION['status'] = "error" . $e->getmessage();
   }
 }
 $conn = null;
@@ -134,6 +131,18 @@ background-attachment:fixed !important;">
   </header>
   <!--=============Header End=============-->
   <!--=============Form Start=============-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-4">
+        <?php if (isset($_SESSION['status'])) : ?>
+          <h5 class="alert alert-success"><?= $_SESSION['status']; ?> </h5>
+        <?php
+          unset($_SESSION['status']);
+        endif;
+        ?>
+      </div>
+    </div>
+  </div>
   <section id="form">
     <div class="container-fluid">
       <div class="row no-margin">
@@ -174,7 +183,7 @@ background-attachment:fixed !important;">
                 <div class="row form-row">
                   <div class="col-sm-6">
                     <select name="subcity" id="subcity" class="form-control" required>
-                      <option disabled selected>Select Subcity &#42;</option>
+                      <option disabled selected hidden>Select Subcity &#42;</option>
                       <option value="Addis Ketema">Addis Ketema</option>
                       <option value="Akaki Kality">Akaki Kality</option>
                       <option value="Arada">Arada</option>
@@ -189,7 +198,7 @@ background-attachment:fixed !important;">
                   </div>
                   <div class="col-sm-6">
                     <select name="city" id="city" class="form-control" required>
-                      <option disabled selected>Select City &#42;</option>
+                      <option disabled selected hidden>Select City &#42;</option>
                       <option value="Addis Ababa">Addis Ababa</option>
                       <option value="Bahirdar">Bahirdar</option>
                       <option value="Jimma">Jimma</option>
@@ -212,7 +221,7 @@ background-attachment:fixed !important;">
 
                 <div class="row form-row">
                   <select name="service" id="service" class="form-control" required>
-                    <option disabled selected>Select Service &#42;</option>
+                    <option disabled selected hidden>Select Service &#42;</option>
                     <option value="Injection">Injection</option>
                     <option value="Wound Dressing">Wound Dressing</option>
                     <option value="Catheterization">Catheterization</option>
@@ -231,13 +240,13 @@ background-attachment:fixed !important;">
 
                 </div>
                 <div class="row">
-                <span id="msg" class="text-center w-responsive"><?php 
-                if (isset($_SESSION['status'])) {
-                  echo $_SESSION['status'];
-                  unset($_SESSION['status']);
-                }
-                
-                ?></span>
+                  <span id="msg" class="text-center w-responsive"><?php
+                                                                  if (isset($_SESSION['status'])) {
+                                                                    echo $_SESSION['status'];
+                                                                    unset($_SESSION['status']);
+                                                                  }
+
+                                                                  ?></span>
                 </div>
 
               </div>

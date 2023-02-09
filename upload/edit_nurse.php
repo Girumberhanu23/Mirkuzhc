@@ -2,38 +2,17 @@
 session_start();
 include('../conn.php');
 
-if (isset($_POST['delete_license'])) {
-    $id = $_POST['delete_license'];
-
-    try {
-        $query = "DELETE FROM nurses WHERE id=:id";
-        $statement = $conn->prepare($query);
-        $data = [':id' => $id];
-        $query_execute = $statement->execute($data);
-
-        if ($query_execute) {
-            $_SESSION['status'] = "Deleted Successfully";
-            header('Location: view.php');
-            exit(0);
-        } else {
-            $_SESSION['status'] = "Not Deleted";
-            header('Location: view.php');
-            exit(0);
-        }
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
-}
-
 ?>
-<!doctype html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <title>Manage Nurses</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
@@ -43,10 +22,21 @@ if (isset($_POST['delete_license'])) {
 
     <!--Custom Css-->
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Admin Panel</title>
+    <!--End Custom Css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .inner-layer {
+            overflow: hidden;
+        }
+    </style>
 </head>
 
-<body>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/firstAid.jpg) !important;
+background-size: cover !important;
+background-attachment:fixed !important;">
+
     <!--=============Header Start=============-->
     <header>
         <section id="topbar" class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bg-primary text-white topbar-transparent">
@@ -83,7 +73,7 @@ if (isset($_POST['delete_license'])) {
                             <a class="nav-link" href="services.html">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="book.php">Book Appointment</a>
+                            <a class="nav-link active" aria-current="page" href="book.php">Book Appointment</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php#contact">Contact us</a>
@@ -91,7 +81,7 @@ if (isset($_POST['delete_license'])) {
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login.php">
+                            <a class="nav-link" href="login.php">
                                 <i class="bi bi-person "></i>
                             </a>
                         </li>
@@ -99,12 +89,10 @@ if (isset($_POST['delete_license'])) {
                 </div>
             </div>
         </nav>
-        <!-- End-->
+        <!--Navbar End-->
     </header>
     <!--=============Header End=============-->
-    <div>
-        <!--<center><h1>Welcome <?php echo $_SESSION["username"]; ?></h1></center> -->
-    </div>
+    <!--=============Form Start=============-->
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
@@ -117,71 +105,75 @@ if (isset($_POST['delete_license'])) {
             </div>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container mb-5">
         <div class="row">
-            <div class="col-md-12 mt-4">
+            <div class="col-md-8 mt-4">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Nurses List
-                            <a href="upload.php" class="btn btn-primary float-end">Add Nurse</a>
+                        <h3>Edit & Update Nurses
+                            <a href="view.php" class="btn btn-danger float-end">Back</a>
                         </h3>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered table-striped table-condensed" style="width: auto;">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>License</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                $query = "SELECT * FROM nurses";
-                                $statement = $conn->prepare($query);
-                                $statement->execute();
 
-                                $statement->setFetchMode(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
-                                $result = $statement->fetchAll();
-                                if ($result) {
-                                    foreach ($result as $row) {
-                                ?>
-                                        <tr>
-                                            <td><?= $row->id; ?></td>
-                                            <td><?= $row->name; ?></td>
-                                            <td class="text-center w-25"><img class="card-img-top img-thumbnail w-50" src="uploads/<?= $row->image_url; ?>" alt="Nurse License Image"></td>
-                                            <td><a name="edit_license" class="btn btn-warning" href="edit_nurse.php?id=<?= $row->id; ?>">Edit</a></td>
-                                            <td>
-                                                <form action="view.php" method="post">
-                                                    <button type="submit" name="delete_license" value="<?= $row->id; ?>" class="btn btn-danger">Delete</button>
-                                                </form>
+                    <?php
+                    if(isset($_GET['id']))
+                    {
+                        $nurse_id = $_GET['id'];
 
-                                            </td>
+                        $query = "SELECT * FROM nurses WHERE id=:id";
 
-                                        </tr>
-                                    <?php
-                                    }
-                                } else {
-                                    ?>
-                                    <tr>
-                                        <td colspan="8">No Record Found</td>
-                                    </tr>
-                                <?php
-                                }
-                                ?>
-                            </tbody>
-                        </table>
+                        $statement = $conn -> prepare($query);
+                        $data= [ ':id' => $nurse_id ];
+                        $statement->execute($data);
 
+                        $result =$statement->fetch(PDO::FETCH_OBJ); // PDO::FETCH_ASSOC
 
+                    }
+                    ?>
+                        <form action="view.php" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="student_id" value="<?=$result->id;?>">
+                            <div class="mb-3">
+                                <label for="name">Full Name</label>
+                                <input type="text" name="name" id="name" value="<?=$result->name;?>" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="my_image">Attach license</label>
+                                <input type="file" name="my_image" value="<?=$result->image_url;?>" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" name="update_nurse" value="Upload" class="form-control bg-primary text-white">
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--=============Form End=============-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#dat").datepicker();
+        })
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
+<?php
+include("../footer.php");
+?>
 
 </html>
