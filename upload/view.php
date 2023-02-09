@@ -1,15 +1,134 @@
-<?php include "db_conn.php"?>
-<!DOCTYPE html>
+<?php
+session_start();
+include('../conn.php');
+
+if(isset($_POST['delete_license']))
+{
+    $id = $_POST['delete_license'];
+
+    try{
+        $query = "DELETE FROM nurses WHERE id=id";
+        $statement = $conn ->prepare($query);
+        $data = [':id' => $id];
+        $query_execute = $statement -> execute($data);
+        
+        if($query_execute){
+            $_SESSION['status'] = "Deleted Successfully";
+            header('Location: view.php');
+            exit(0);
+        }
+        else
+        {
+            $_SESSION['status'] = "Not Deleted";
+            header('Location: view.php');
+            exit(0);
+        }
+    }catch(PDOException $e){
+        echo $e -> getMessage();
+    }
+
+}
+
+?>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Nurses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <!-- End Bootstrap CSS -->
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--Custom Css-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Admin Panel</title>
 </head>
+
 <body>
-    <a href="index.php">&#8592;</a>
-    <?php
+    <!--=============Header Start=============-->
+    <header>
+        <section id="topbar" class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bg-primary text-white topbar-transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6   text-start">
+
+                        <i class="bi bi-clock"></i> Mon-Sat: 8:00 AM - 6:00 PM
+                    </div>
+                    <div class="col-md-6 text-end">
+                        Call us: <span class="px-3"><i class="bi bi-phone "></i> <a href="tel:+251921379660" style="color: #fff;"> +251 921-379660</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.php">
+                    <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="bi bi-list"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="book.php">Book Appointment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php#contact">Contact us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.php">
+                                <i class="bi bi-person "></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End-->
+    </header>
+    <!--=============Header End=============-->
+    <div>
+        <!--<center><h1>Welcome <?php echo $_SESSION["username"]; ?></h1></center> -->
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Nurses List </h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped table-condensed" style="width: auto;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>License</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
                                 $query = "SELECT * FROM nurses";
                                 $statement = $conn->prepare($query);
                                 $statement->execute();
@@ -19,12 +138,14 @@
                                 if ($result) {
                                     foreach ($result as $row) {
                                 ?>
-                                <div class="alb">
-                                    <img src="uploads/<?=$row->image_url; ?>">
-                                            <?= $row->name; ?>
-                                </div>
-                                    
-                                        
+                                        <tr>
+                                            <td><?= $row->id; ?></td>
+                                            <td><?= $row->name; ?></td>
+                                            <td><img class="card-img-top w-25" src="uploads/<?= $row->image_url; ?>" alt="Nurse License Image"></td>
+                                            <td><button type="button" name="edit_license" class="btn btn-warning">Edit</button></td>
+                                            <td><button type="button" name="delete_license" class="btn btn-danger">Delete</button></td>
+                                            
+                                        </tr>
                                     <?php
                                     }
                                 } else {
@@ -35,5 +156,17 @@
                                 <?php
                                 }
                                 ?>
+                            </tbody>
+                        </table>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

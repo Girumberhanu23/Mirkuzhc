@@ -99,7 +99,8 @@ include('conn.php');
                                     <th>Subcity</th>
                                     <th>City</th>
                                     <th>House</th>
-                                    <th>Postal</th>
+                                    <th>Passport</th>
+                                    <th>Service</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -121,7 +122,8 @@ include('conn.php');
                                             <td><?= $row->Subcity; ?></td>
                                             <td><?= $row->City; ?></td>
                                             <td><?= $row->House; ?></td>
-                                            <td><?= $row->Postal; ?></td>
+                                            <td><?= $row->Passport; ?></td>
+                                            <td><?= $row->Service; ?></td>
                                         </tr>
                                     <?php
                                     }

@@ -17,8 +17,8 @@
 </head>
 <body>
 
-<?php if(isset($_GET['error'])): ?>
-    <p><?php echo $_GET['error']; ?></p>
+<?php if(isset($_POST['error'])): ?>
+    <p><?php echo $_POST['error']; ?></p>
     <?php endif ?>
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <input type="text" name="name" id="name">

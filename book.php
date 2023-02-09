@@ -174,7 +174,7 @@ background-attachment:fixed !important;">
                 <div class="row form-row">
                   <div class="col-sm-6">
                     <select name="subcity" id="subcity" class="form-control" required>
-                      <option hidden>Select Subcity &#42;</option>
+                      <option disabled selected>Select Subcity &#42;</option>
                       <option value="Addis Ketema">Addis Ketema</option>
                       <option value="Akaki Kality">Akaki Kality</option>
                       <option value="Arada">Arada</option>
@@ -189,7 +189,7 @@ background-attachment:fixed !important;">
                   </div>
                   <div class="col-sm-6">
                     <select name="city" id="city" class="form-control" required>
-                      <option hidden>Select City &#42;</option>
+                      <option disabled selected>Select City &#42;</option>
                       <option value="Addis Ababa">Addis Ababa</option>
                       <option value="Bahirdar">Bahirdar</option>
                       <option value="Jimma">Jimma</option>
@@ -212,7 +212,7 @@ background-attachment:fixed !important;">
 
                 <div class="row form-row">
                   <select name="service" id="service" class="form-control" required>
-                    <option hidden>Select Service &#42;</option>
+                    <option disabled selected>Select Service &#42;</option>
                     <option value="Injection">Injection</option>
                     <option value="Wound Dressing">Wound Dressing</option>
                     <option value="Catheterization">Catheterization</option>
