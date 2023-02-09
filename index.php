@@ -52,7 +52,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand theme-text" href="index.php">
-                        <img src="img/logo.JPG" alt="" width="70px" height="70px">
+                        <img src="img/Logo.png" alt="" width="70px" height="70px">
                         &nbsp;Mirkuz hc</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -71,8 +71,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php#contact">Contact us</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="book.php">Book Appointment</a>
+                            </li>
                         </ul>
-                        <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
+                        <ul class="navbar-nav mb-2 mb-lg-0 action-menu ml-4">
                             <li class="nav-item">
                                 <a class="nav-link " href="login.php">
                                     <i class="bi bi-person "></i>

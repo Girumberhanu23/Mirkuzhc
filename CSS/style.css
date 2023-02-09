@@ -281,7 +281,8 @@ svg.wave {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #03e3f3);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #0D6EFD);
+  color: #fff;
   border-radius: 10pox;
   position: absolute;
   left: 0;
@@ -381,8 +382,87 @@ svg.wave {
   transition: all 400ms ease-in-out;
 }
 
+
 /*****************************
     About Us End
+******************************/
+
+/*****************************
+    Nurses Start
+******************************/
+.nurses .work-list {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  
+}
+.nurses .work-list .card {
+  padding-bottom: 20px;
+}
+.nurses .work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nurses .work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.nurses .layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #0D6EFD);
+  color: #fff;
+  border-radius: 10pox;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.nurses .layer h3 {
+  font-weight: 400px;
+  margin-bottom: 20px;
+}
+
+.nurses .layer a {
+  margin-top: 20px;
+  color: #e35280;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.nurses .work:hover img {
+  transform: scale(1.1);
+}
+
+.nurses .work:hover .layer {
+
+  height: 100%;
+}
+
+/*****************************
+    Nurses End
 ******************************/
 
 /*****************************

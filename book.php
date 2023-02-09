@@ -1,4 +1,5 @@
 <?php
+session_start();
 ///register page
 require_once "conn.php";
 
@@ -12,30 +13,34 @@ if (isset($_POST["submit"])) {
   $subcity = $_POST["subcity"];
   $city = $_POST["city"];
   $house = $_POST["house"];
-  $postal = $_POST["postal"];
+  $passport = $_POST["passport"];
+  $service = $_POST["service"];
   //to check if email, exists
   try {
 
     $check = $conn->prepare("SELECT * FROM book WHERE email=?");
     $check->execute([$email]);
     if ($check->rowCount() > 0) {
-      echo "Email exists try another";
+      $_SESSION['status']= "Email exists try another!";
+    
     } else {
 
       try {
-        $insert = $conn->prepare("INSERT INTO book(name,phone,email,date,subcity,city,house,postal)VALUE(?,?,?,?,?,?,?,?)");
+        $insert = $conn->prepare("INSERT INTO book(name,phone,email,date,subcity,city,house,passport,service)VALUE(?,?,?,?,?,?,?,?,?)");
         if ($insert->execute([
-          $name, $phone, $email, $date, $subcity, $city, $house, $postal
+          $name, $phone, $email, $date, $subcity, $city, $house, $passport, $service
         ])) {
-          echo "Successful!!!";
+          $_SESSION['status']= "Appointment Added Successfully!";
+          header('Location: book.php#msg');
         }
       } catch (PDOException $e) {
-        echo $e->getMessage();
+        $_SESSION['status']= $e->getMessage();
+    
       }
     }
   } catch (PDOException $e) {
-
-    echo "error" . $e->getmessage();
+    $_SESSION['status']= "error" . $e->getmessage();
+    
   }
 }
 $conn = null;
@@ -129,7 +134,7 @@ background-attachment:fixed !important;">
   </header>
   <!--=============Header End=============-->
   <!--=============Form Start=============-->
-  <section>
+  <section id="form">
     <div class="container-fluid">
       <div class="row no-margin">
         <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
@@ -199,28 +204,40 @@ background-attachment:fixed !important;">
                     <input type="number" name="house" id="house" placeholder="Enter House Number" class="form-control">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" placeholder="Passport Number" name="license" class="form-control">
+                    <input type="text" id="passport" placeholder="Passport Number" name="passport" class="form-control">
                   </div>
                 </div>
 
                 <h5>Service Detail</h5>
 
                 <div class="row form-row">
-                    <select name="service" id="service" class="form-control" required>
-                      <option hidden>Select Service &#42;</option>
-                      <option value="Injection">Injection</option>
-                      <option value="Wound Dressing">Wound Dressing</option>
-                      <option value="Catheterization">Catheterization</option>
-                      <option value="Naso-gastric Tube insertion">Naso-gastric Tube insertion</option>
-                      <option value="Laboratory Specimen Collection">Laboratory Specimen Collection</option>
-                      <option value="Doctor Visit">Doctor Visit</option>
-                      <option value="Schedule for Hospital visit">Schedule for Hospital visit</option>
-                    </select>
+                  <select name="service" id="service" class="form-control" required>
+                    <option hidden>Select Service &#42;</option>
+                    <option value="Injection">Injection</option>
+                    <option value="Wound Dressing">Wound Dressing</option>
+                    <option value="Catheterization">Catheterization</option>
+                    <option value="Naso-gastric Tube insertion">Naso-gastric Tube insertion</option>
+                    <option value="Laboratory Specimen Collection">Laboratory Specimen Collection</option>
+                    <option value="Doctor Visit">Doctor Visit</option>
+                    <option value="Schedule for Hospital visit">Schedule for Hospital visit</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-
+                <div class="row form-row">
+                  <textarea name="otherService" id="otherService" cols="30" placeholder="Please specify your requested service if not mentioned above." rows="3"></textarea>
+                </div>
                 <div class="row form-row">
                   <input type="submit" value="Book Appointment" name="submit" class="col-12 btn btn-primary btn-block mb-4">
 
+                </div>
+                <div class="row">
+                <span id="msg" class="text-center w-responsive"><?php 
+                if (isset($_SESSION['status'])) {
+                  echo $_SESSION['status'];
+                  unset($_SESSION['status']);
+                }
+                
+                ?></span>
                 </div>
 
               </div>

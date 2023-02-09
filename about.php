@@ -1,3 +1,4 @@
+<?php include "upload/db_conn.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -234,6 +235,64 @@
         </div>
     </section>
     <!--About Us End-->
+
+    <!----------- Our team Start --------->
+    <section class="nurses container mb-5">
+        <h1 class="text-center">Our team</h1>
+        <p>Meet our team of experienced health professionals. All professionals working with us are certified. Take a glance at some of the professionals available today.</p>
+
+        <?php
+        $query = "SELECT * FROM nurses";
+        $statement = $conn->prepare($query);
+        $statement->execute();
+
+        $statement->setFetchMode(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
+        $result = $statement->fetchAll();
+        if ($result) {
+            foreach ($result as $row) {
+        ?>
+                <div class="work-list">
+                    <div class="work row">
+                        <a href="upload/uploads/<?= $row->image_url; ?>" target="_self">
+                            <div class="card-deck h-75">
+                                <div class="card shadow">
+                                    <img class="card-img-top" src="upload/uploads/<?= $row->image_url; ?>" height=240 alt="Card image cap">
+
+
+                                    <div class="card-body">
+                                        <h1 class="text-center"></i></h1>
+                                        <h3 class="card-title text-center pb-5"><i class="fa fa-duotone fa-stethoscope"> </i><?= $row->name; ?></h3>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="layer">
+                                <h3><i class="fa fa-duotone fa-stethoscope"> </i><?= $row->name; ?></h3>
+                                <p>Display the license of this health professional.</p>
+
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                <?php
+            }
+        } else {
+                ?>
+
+                <p class="card-text">No Record Found!</p>
+            <?php
+        }
+            ?>
+
+                </div>
+
+
+    </section>
+    <!----------- Our team End --------->
+
     <!--=============Footer Start=============-->
     <footer class="text-center text-lg-start bg-primary py-3 text-white">
 

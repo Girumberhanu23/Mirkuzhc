@@ -1,6 +1,6 @@
 <?php
 try{
-  require_once ('conn.php');
+  require_once ('../conn.php');
 $check="SELECT * FROM book";
 }catch(Exception $e){
 echo $e->getMessage();
