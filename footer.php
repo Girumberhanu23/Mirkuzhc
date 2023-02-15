@@ -64,7 +64,7 @@
                                         </a></h3><br>
                                 </div>
                                 <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <h3><a href="http://www.gmail.com" class="me-4 text-reset">
+                                    <h3><a href="mailto:mirkuzhc@gmail.com" class="me-4 text-reset">
                                             <i class="bi bi-google"></i>
                                         </a></h3><br>
                                 </div>

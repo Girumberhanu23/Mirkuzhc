@@ -135,7 +135,8 @@ $conn = null;
 
                                 <!-- Submit button -->
                                 <div class="col-md-12">
-                                    <input type="submit" value="Sign in" class="col-12 btn btn-primary btn-block mb-4">
+                                    <!-- <input type="submit" value="Sign in" class="col-12 btn btn-primary btn-block mb-4"> -->
+                                    <a href="display.php" class="col-12 btn btn-primary btn-block mb-4">Sign in</a>
                                 </div>
                                 <!-- <p class="text-center"> Don't have account yet?<a href="register.php" class="text-primary"> Sign up</a></p> -->
                             </form>

@@ -91,7 +91,7 @@
         <div class="container">
             <section>
                 <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
-                        <h1 class="mb-3">Our Services</h1>
+                        <h1 class="mb-3 font-weight-bold">Our Services</h1>
                         <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
                         <p class="mt-4">We specialize in caring for variety of in-home care options</p>
                 </div>

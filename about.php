@@ -9,15 +9,11 @@
     <title>About Us</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <!--Google Fonts-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <!-- End Bootstrap CSS -->
 
@@ -28,8 +24,7 @@
 <body style="background-color: #FBFCF5;">
     <!--Header Start-->
     <header>
-        <section id="topbar"
-            class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bg-primary text-white topbar-transparent">
+        <section id="topbar" class="mb-2 mb-lg-0 mb-sm-0 d-none d-lg-flex align-items-center pt-2 pb-2 bg-primary text-white topbar-transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6   text-start">
@@ -37,8 +32,7 @@
                         <i class="bi bi-clock"></i> Mon-Sat: 8:00 AM - 6:00 PM
                     </div>
                     <div class="col-md-6 text-end">
-                        Call us: <span class="px-3"><i class="bi bi-phone "></i> <a href="tel:+251921379660"
-                                style="color: #fff;"> +251 921-379660</a></span>
+                        Call us: <span class="px-3"><i class="bi bi-phone "></i> <a href="tel:+251921379660" style="color: #fff;"> +251 921-379660</a></span>
                     </div>
                 </div>
             </div>
@@ -49,9 +43,7 @@
                 <a class="navbar-brand" href="index.php">
                     <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -196,9 +188,9 @@
                     <h2 class="text-center"> Values </h2>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="about-item shadow-lg rounded h-75">
-                            <h3 class="text-center"><i class="fa fa-pencil"></i></br>Safety</h3>
+                            <h3 class="text-center"><i class="fa fa-user-shield"></i></br>Safety</h3>
                             <hr>
-                            <p>Mirkuz Home Based Health Care Service strives to manage critical aspects of risks to
+                            <p class="pt-2">Mirkuz Home Based Health Care Service strives to manage critical aspects of risks to
                                 clients and staffs. Safety is a top priority for us, and we are dedicated to being
                                 proactive in support of it. We passionately care about the safety of our clients and
                                 staffs, and we recognize that we must be diligent in identifying potential safety
@@ -208,9 +200,9 @@
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="about-item shadow-lg rounded h-75">
-                            <h3 class="text-center"><i class="fa fa-pencil"></i></br>Community</h3>
+                            <h3 class="text-center"><i class="fa fa-group-arrows-rotate"></i></br>Community</h3>
                             <hr>
-                            <p>We are determined to have strong, mutually beneficial relationships with our
+                            <p class="pt-2">We are determined to have strong, mutually beneficial relationships with our
                                 community partners and our community. Everyone in our organization contributes on
                                 some level to the quality of the relationships that we are building. Being socially
                                 responsible is a part of the equation. We want to make a positive difference by
@@ -221,9 +213,9 @@
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="about-item shadow-lg rounded h-75">
-                            <h3 class="text-center"><i class="fa fa-pencil"></i></br>Integrity and Ethics</h3>
+                            <h3 class="text-center"><i class="fa fa-check"></i></br>Integrity and Ethics</h3>
                             <hr>
-                            <p>We are honest, accountable, transparent and responsible in our approach. We embrace
+                            <p class="pt-2">We are honest, accountable, transparent and responsible in our approach. We embrace
                                 high ethical standards, complete honesty, and fairness to our clients, staffs and
                                 community partners. We have ethical policies and procedures in place, as well as a
                                 framework to guide and support our staff to high ethical standards. We investigate
@@ -238,59 +230,48 @@
     <!--About Us End-->
 
     <!----------- Our team Start --------->
-    <section class="nurses container mb-5">
-        <h1 class="text-center">Our team</h1>
-        <p>Meet our team of experienced health professionals. All professionals working with us are certified. Take a glance at some of the professionals available today.</p>
+    <section id="nurses" class="mb-5">
+    <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
+        <h1 class="mb-3 font-weight-bold">Our team</h1>
+        <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
+        <p class="mt-4">Meet our team of experienced health professionals. All professionals working with us are certified. Take a glance at some of the professionals available today.</p>
+    </div>
+        <div class="d-flex justify-content-around">
+            <?php
+            $query = "SELECT * FROM nurses";
+            $statement = $conn->prepare($query);
+            $statement->execute();
 
-        <?php
-        $query = "SELECT * FROM nurses";
-        $statement = $conn->prepare($query);
-        $statement->execute();
-
-        $statement->setFetchMode(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
-        $result = $statement->fetchAll();
-        if ($result) {
-            foreach ($result as $row) {
-        ?>
-                <div class="work-list">
-                    <div class="work row">
+            $statement->setFetchMode(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
+            $result = $statement->fetchAll();
+            if ($result) {
+                foreach ($result as $row) {
+            ?>
+                    <div class="work-list">
                         <a href="upload/uploads/<?= $row->image_url; ?>" target="_self">
-                            <div class="card-deck h-75">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="upload/uploads/<?= $row->image_url; ?>" height=240 alt="Card image cap">
+                            <div class="work shadow ">
+                                <img class="card-img-top" src="upload/uploads/<?= $row->image_url; ?>" height=240 alt="Card image cap">
+                                <h3 class="card-title text-center pb-5"><i class="fa fa-duotone fa-stethoscope"> </i> <?= $row->name; ?></h3>
+                                <div class="layer">
+                                    <h3><i class="fa fa-duotone fa-stethoscope"> </i> <?= $row->name; ?></h3>
+                                    <p>Display the license of this health professional.</p>
 
-
-                                    <div class="card-body">
-                                        <h1 class="text-center"></i></h1>
-                                        <h3 class="card-title text-center pb-5"><i class="fa fa-duotone fa-stethoscope"> </i><?= $row->name; ?></h3>
-
-                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="layer">
-                                <h3><i class="fa fa-duotone fa-stethoscope"> </i><?= $row->name; ?></h3>
-                                <p>Display the license of this health professional.</p>
-
                             </div>
                         </a>
                     </div>
 
 
-
                 <?php
-            }
-        } else {
+                }
+            } else {
                 ?>
 
                 <p class="card-text">No Record Found!</p>
             <?php
-        }
+            }
             ?>
-
-                </div>
-
-
+        </div>
     </section>
     <!----------- Our team End --------->
 
@@ -300,9 +281,7 @@
     ?>
     <!--=============Footer End=============-->
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
