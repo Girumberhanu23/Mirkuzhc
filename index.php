@@ -52,7 +52,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand theme-text" href="index.php">
-                        <img src="img/Logo.png" alt="" width="70px" height="70px">
+                        <img src="img/Logo.png" alt="" width="90px" height="90px">
                         &nbsp;Mirkuz hc</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -63,10 +63,10 @@
                                 <a class="nav-link act" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
+                                <a class="nav-link" href="about.php">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link" href="services.php">Services</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php#contact">Contact us</a>
@@ -86,14 +86,14 @@
                 </div>
             </nav>
             <!-- navbar code -->
-            <div class="middle">
-                <h3 class="text-white display-3 fw-bold">Building a Healthy Community <span class="theme-text">One Individual at a Time.</span>.<span class="theme-text">.</span></h3>
+            <div class="middle d-flex justify-content-end align-items-end mt-5" style="height: 65vh; width: 75%;">
+                <h3 class="text-white display-3 fw-bold mt-5">Building a Healthy Community <span class="theme-text">One Individual at a Time.</span>.<span class="theme-text">.</span></h3>
             </div>
         </div>
-        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#fff" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,133.3C480,117,600,107,720,106.7C840,107,960,117,1080,122.7C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
             </path>
-        </svg>
+        </svg> -->
     </section>
 
 
@@ -120,12 +120,12 @@
             <div class="row  pt-5 pb-5">
 
                 <div class="col-md-5 align-items-stretch">
-                    <img src="img/image.jpg" alt="Treating patients" class="h-100 w-100">
+                    <img src="img/machine.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
 
                 <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
 
-                    <div class="content text-white">
+                    <div class="content text-white py-5">
                         <h3>What makes us different?</h3>
                         <ul class="qualities-indicator">
                             <li>Our well experienced team</li>
@@ -150,12 +150,15 @@
     <!----------- Work With Us Start --------->
     <section class="container">
         <div class="row">
-
+        <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
+                        <h1 class="mb-3">Now We Are Ready to Give Our Services for</h1>
+                        <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
+                </div>
             <div class="col-sm-6 col-lg-3 mb-5">
                 <div class="card shadow h-100">
-                    <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                    <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
-                        <h1 class="text-center"><i class="fa fa-duotone fa-hotel"></i></h1>
+                        <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-hotel"></i></h1>
                         <h3 class="card-title text-center">Hotels</h3>
                         <p class="card-text pb-5">By providing 24 hr./12 hr. our health care service and visit program to hotel guests, to increase customer satisfaction by decreasing unnecessary visit to clinics and hospital, unless it's indicated.</p>
                     </div>
@@ -163,9 +166,9 @@
             </div>
             <div class="col-sm-6 col-lg-3 mb-5">
                 <div class="card shadow h-100">
-                    <img class="card-img-top" src="img/construction.jpg" height=240 alt="Card image cap">
+                    <!-- <img class="card-img-top" src="img/construction.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
-                        <h1 class="text-center"><i class="fa fa-duotone fa-person-digging"></i></h1>
+                        <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-person-digging"></i></h1>
                         <h3 class="card-title text-center">Construction Sites</h3>
                         <p class="card-text pb-5">Helps employees to have a health working environment, by improving working safety and gave them a first Aid by our health professional.</p>
                     </div>
@@ -173,9 +176,9 @@
             </div>
             <div class="col-sm-6 col-lg-3 mb-5">
                 <div class="card shadow h-100">
-                    <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                    <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
-                        <h1 class="text-center"><i class="fa fa-duotone fa-school"></i></h1>
+                        <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-school"></i></h1>
                         <h3 class="card-title text-center">Schools</h3>
                         <p class="card-text">By assigning health professionals, improve the school compound to be healthier, safer and risk free, incase if there need for assistance, the nurse will give care to the child, if the condition is worse need for a better health facility, the nurse will assist with the escort.</p>
                     </div>
@@ -184,9 +187,9 @@
 
             <div class="col-sm-6 col-lg-3 mb-5">
                 <div class="card shadow h-100">
-                    <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap">
+                    <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
-                        <h1 class="text-center"><i class="fa fa-duotone fa-building-ngo"></i></h1>
+                        <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-building-ngo"></i></h1>
                         <h3 class="card-title text-center">Other Governmental and NGO offices</h3>
                         <p class="card-text pb-5">Our doors are wide open to any organization willing to work with us!</p>
                     </div>
@@ -258,6 +261,7 @@
             <!--Section: Contact v.2-->
             <div class="header">
                 <h1 class="h1-responsive font-weight-bold text-center">Contact us</h1>
+                <hr class="mx-auto mt-4" style="width: 140px; height: 2px; background: #0D6EFD;">
                 <p class="text-center w-responsive">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -330,92 +334,9 @@
 
 
     <!--=============Footer Start=============-->
-    <footer class="text-center text-lg-start bg-primary py-3 text-white">
-
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="bi bi-gem me-3"></i>Mirkuz HC
-                        </h6>
-                        <p>
-                        <h5>Address:</h5>
-                        <p> Marathon Building, 5th floor, Office No. 510</p>
-                        <p>
-                            Addis Ababa, Yeka sub city, Wereda 08
-                        </p>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
-                        <!-- Links -->
-                        <div class="row">
-                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                <h3><a href="http://www.facebook.com/mirkuzhc" class="me-4 text-reset">
-                                        <i class="bi bi-facebook"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                <h3><a href="http://www.twitter.com" class="me-4 text-reset">
-                                        <i class="bi bi-twitter"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                <h3><a href="http://www.gmail.com" class="me-4 text-reset">
-                                        <i class="bi bi-google"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                <h3><a href="http://www.instagram.com" class="me-4 text-reset">
-                                        <i class="bi bi-instagram"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                <h3><a href="http://www.linkedin.com" class="me-4 text-reset">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a></h3><br>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p>
-                            <i class="bi bi-envelope me-3"></i>
-                            mirkuzhc@gmail.com
-                        </p>
-                        <p><i class="bi bi-phone me-3"></i><a href="tel:+251921379660" style="color: #fff; text-decoration:none;">
-                                +251 921-379660</a></p>
-                        <p><i class="bi bi-print me-3"></i><a href="tel:+251966020039" style="color: #fff; text-decoration:none;">
-                                +251 966-020039</a></p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 Copyright: Nano Technologies Inc.
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
     <!--=============Footer End=============-->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

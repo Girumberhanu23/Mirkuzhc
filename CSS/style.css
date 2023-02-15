@@ -30,7 +30,7 @@ a {
 ******************************/
 #header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(63, 62, 62, 0.7)),
-    url("../img/image3.jpg");
+    url("../img/landing.jpg") !important;
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -53,16 +53,16 @@ svg.wave {
   position: absolute;
   bottom: -70px;
 }
-.middle {
+/* .middle {
   display: flex;
   justify-content: start;
   align-items: center;
   height: 80vh;
   width: 70%;
-}
-.middle h1 {
+} */
+/* .middle h1 {
   font-size: 70px;
-}
+} */
 
 
 

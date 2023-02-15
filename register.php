@@ -88,10 +88,10 @@ $conn = null;
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="about.php">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="services.php">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="book.php">Book Appointment</a>
@@ -114,7 +114,7 @@ $conn = null;
     </header>
     <!--=============Header End=============-->
     <!--=============Register Start=============-->
-    <div class="container login-form">
+    <div class="container login-form mb-5">
         <div class="row mt-4 justify-content-center">
 
             <div class="col-md-4">
@@ -164,92 +164,9 @@ $conn = null;
     </div>
     <!--=============Register End=============-->
     <!--=============Footer Start=============-->
-    <footer class="text-center text-lg-start bg-primary py-3 text-white">
-
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="bi bi-gem me-3"></i>Mirkuz HC
-                        </h6>
-                        <p>
-                        <h5>Address:</h5>
-                        <p> Marathon Building, 5th floor, Office No. 510</p>
-                        <p>
-                            Addis Ababa, Yeka sub city, Wereda 08
-                        </p>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
-                        <!-- Links -->
-                        <div class="row">
-                            <div class="col-md-2">
-                                <h3><a href="facebook.com/mirkuzhc" class="me-4 text-reset">
-                                        <i class="bi bi-facebook"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="twitter.com" class="me-4 text-reset">
-                                        <i class="bi bi-twitter"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="gmail.com" class="me-4 text-reset">
-                                        <i class="bi bi-google"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="instagram.com" class="me-4 text-reset">
-                                        <i class="bi bi-instagram"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="linkedin.com" class="me-4 text-reset">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a></h3><br>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p>
-                            <i class="bi bi-envelope me-3"></i>
-                            mirkuzhc@gmail.com
-                        </p>
-                        <p><i class="bi bi-phone me-3"></i><a href="tel:+251921379660" style="color: #fff; text-decoration:none;">
-                                +251 921-379660</a></p>
-                        <p><i class="bi bi-print me-3"></i><a href="tel:+251966020039" style="color: #fff; text-decoration:none;">
-                                +251 966-020039</a></p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2023 Copyright: Nano Technologies Inc.
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
     <!--=============Footer End=============-->
 
 

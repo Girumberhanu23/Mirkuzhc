@@ -94,7 +94,7 @@ if (isset($_POST['update_nurse'])) {
     }
 
 
-
+}
 
 // Insert into database
 if (isset($_POST['submit']) && isset($_FILES['my_image'])) {

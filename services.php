@@ -60,7 +60,7 @@
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="about.php">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="services.html">Services</a>
@@ -92,7 +92,7 @@
             <section>
                 <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
                         <h1 class="mb-3">Our Services</h1>
-                        <hr class="bg-primary text-center m-auto" style="font-weight: bold; width: 120px; ">
+                        <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
                         <p class="mt-4">We specialize in caring for variety of in-home care options</p>
                 </div>
             </section>
@@ -180,7 +180,7 @@
             <div class="row  pt-5 pb-5">
                 <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
 
-                    <div class="content text-white">
+                    <div class="content text-white py-5">
                         <h3>Our Objective</h3>
                         <ul class="qualities-indicator">
                             <li>To achieving the highest standards in the delivery of Private Health Care, by providing reliable Health Care Services that best meets the needs and expectations of our clients.</li>
@@ -190,7 +190,7 @@
 
                 </div>
                 <div class="col-md-5 align-items-stretch">
-                    <img src="img/image.jpg" alt="Treating patients" class="h-100 w-100">
+                    <img src="img/microscope.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
 
                 
@@ -200,94 +200,9 @@
         </div>
     </section>
     <!--=============Footer Start=============-->
-    <footer class="text-center text-lg-start bg-primary py-3 text-white">
-
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="bi bi-gem me-3"></i>Mirkuz HC
-                        </h6>
-                        <p>
-                        <h5>Address:</h5>
-                        <p> Marathon Building, 5th floor, Office No. 510</p>
-                        <p>
-                            Addis Ababa, Yeka sub city, Wereda 08
-                        </p>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
-                        <!-- Links -->
-                        <div class="row">
-                            <div class="col-md-2">
-                                <h3><a href="facebook.com/mirkuzhc" class="me-4 text-reset">
-                                        <i class="bi bi-facebook"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="twitter.com" class="me-4 text-reset">
-                                        <i class="bi bi-twitter"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="gmail.com" class="me-4 text-reset">
-                                        <i class="bi bi-google"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="instagram.com" class="me-4 text-reset">
-                                        <i class="bi bi-instagram"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="linkedin.com" class="me-4 text-reset">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a></h3><br>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p>
-                            <i class="bi bi-envelope me-3"></i>
-                            mirkuzhc@gmail.com
-                        </p>
-                        <p><i class="bi bi-phone me-3"></i><a href="tel:+251921379660"
-                                style="color: #fff; text-decoration:none;">
-                                +251 921-379660</a></p>
-                        <p><i class="bi bi-print me-3"></i><a href="tel:+251966020039"
-                                style="color: #fff; text-decoration:none;">
-                                +251 966-020039</a></p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 Copyright: Nano Technologies Inc.
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
     <!--=============Footer End=============-->
     <!--Objective End-->
 </body>

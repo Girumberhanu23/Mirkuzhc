@@ -59,8 +59,8 @@
                                         </a></h3><br>
                                 </div>
                                 <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <h3><a href="http://www.twitter.com" class="me-4 text-reset">
-                                            <i class="bi bi-twitter"></i>
+                                    <h3><a href="http://www.tiktok.com/mirkuze2" class="me-4 text-reset">
+                                            <i class="bi bi-tiktok"></i>
                                         </a></h3><br>
                                 </div>
                                 <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
@@ -69,7 +69,7 @@
                                         </a></h3><br>
                                 </div>
                                 <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <h3><a href="http://www.instagram.com" class="me-4 text-reset">
+                                    <h3><a href="http://www.instagram.com/mirkuzhc" class="me-4 text-reset">
                                             <i class="bi bi-instagram"></i>
                                         </a></h3><br>
                                 </div>

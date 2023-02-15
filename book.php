@@ -16,13 +16,13 @@ if (isset($_POST["submit"])) {
   $passport = $_POST["passport"];
   $service = $_POST["service"];
   //to check if email, exists
-  try {
+  // try {
 
-    $check = $conn->prepare("SELECT * FROM book WHERE email=?");
-    $check->execute([$email]);
-    if ($check->rowCount() > 0) {
-      $_SESSION['status'] = "Email exists try another!";
-    } else {
+  //   $check = $conn->prepare("SELECT * FROM book WHERE email=?");
+  //   $check->execute([$email]);
+  //   if ($check->rowCount() > 0) {
+  //     $_SESSION['status'] = "Email exists try another!";
+  //   } else {
 
       try {
         $insert = $conn->prepare("INSERT INTO book(name,phone,email,date,subcity,city,house,passport,service)VALUE(?,?,?,?,?,?,?,?,?)");
@@ -30,16 +30,30 @@ if (isset($_POST["submit"])) {
           $name, $phone, $email, $date, $subcity, $city, $house, $passport, $service
         ])) {
           $_SESSION['status'] = "Appointment Added Successfully!";
-//          header('Location: book.php#msg');
+          //          header('Location: book.php#msg');
         }
       } catch (PDOException $e) {
         $_SESSION['status'] = $e->getMessage();
       }
     }
-  } catch (PDOException $e) {
-    $_SESSION['status'] = "error" . $e->getmessage();
-  }
-}
+
+  // } catch (PDOException $e) {
+  //   $_SESSION['status'] = "error" . $e->getmessage();
+  // }
+
+
+  // Email to User and Admin
+  // $mailto = "girumberhanugb4@gmail.com";
+  // $userSubject = "Your Appointment has been set successfully! We will contact you shortly. \n Mirkuz Home Care Services"; // For Clients
+  // $adminSubject = $name. " made the following Appointment";
+  // $headerAdmin = "From: ". $name;
+  // $headerUser = "Mirkuz Home Care Service";
+  // $message = "Patient Name: " .$name. "\nPhone Number:" .$phone. "\nEmail: " .$email. "\nAppointment Date: " .$date. "\nSubcity: " .$subcity. "\nCity: " .$city. "\nHouse Number: " .$house. "\nPassport Number: " .$passport. "\nService Requested: " .$service;
+  // $result = mail($mailto, $adminSubject, $message, $headerAdmin);
+  // $result = mail($email, $userSubject, $message, $headerUser);
+
+
+// }
 $conn = null;
 
 ?>
@@ -71,7 +85,7 @@ $conn = null;
   </style>
 </head>
 
-<body style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/firstAid.jpg) !important;
+<body style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/medicalTools.jpg) !important;
 background-size: cover !important;
 background-attachment:fixed !important;">
 
@@ -105,10 +119,10 @@ background-attachment:fixed !important;">
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
+              <a class="nav-link" href="services.php">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="book.php">Book Appointment</a>
@@ -135,7 +149,11 @@ background-attachment:fixed !important;">
     <div class="row">
       <div class="col-md-12 mt-4">
         <?php if (isset($_SESSION['status'])) : ?>
-          <h5 class="alert alert-success"><?= $_SESSION['status']; ?> </h5>
+          <h5 class="alert alert-success alert-dismissible"><?= $_SESSION['status']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
         <?php
           unset($_SESSION['status']);
         endif;
@@ -144,7 +162,7 @@ background-attachment:fixed !important;">
     </div>
   </div>
   <section id="form">
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
       <div class="row no-margin">
         <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
           <div class="content">
@@ -158,6 +176,8 @@ background-attachment:fixed !important;">
           </div>
         </div>
         <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 ">
+          <!-- <form class="form-login " action="https://formsubmit.co/6d571adb4b99656f0546c10d74b904ed" method="post"> -->
+          <!-- <form class="form-login " action="https://formspree.io/f/mdovebeo" method="post"> -->
           <form class="form-login " action="book.php" method="post">
             <div class="form-data rounded bg-transparent" style="box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);">
               <div class="form-head text-white">
@@ -222,6 +242,15 @@ background-attachment:fixed !important;">
                 <div class="row form-row">
                   <select name="service" id="service" class="form-control" required>
                     <option disabled selected hidden>Select Service &#42;</option>
+                    <option value="Palliative Care">Palliative Care</option>
+                    <option value="Cancer Care">Cancer Care</option>
+                    <option value="Post-Surgery Care">Post-Surgery Care</option>
+                    <option value="Assist Rehabilitation of Stroke Patient">Assist Rehabilitation of Stroke Patient</option>
+                    <option value="Aged Care">Aged Care</option>
+                    <option value="Disability Care">Disability Care</option>
+                    <option value="Child Care">Child Care</option>
+                    <option value="Post-Natal Care">Post-Natal Care</option>
+                    <option value="Dementia Care">Dementia Care</option>
                     <option value="Injection">Injection</option>
                     <option value="Wound Dressing">Wound Dressing</option>
                     <option value="Catheterization">Catheterization</option>
@@ -239,6 +268,9 @@ background-attachment:fixed !important;">
                   <input type="submit" value="Book Appointment" name="submit" class="col-12 btn btn-primary btn-block mb-4">
 
                 </div>
+                <!-- <div class="row form-row">
+                  <a href="editBooking.php" class="btn btn-block btn-outline-light">Edit Booked Appointment</a>
+                </div> -->
                 <div class="row">
                   <span id="msg" class="text-center w-responsive"><?php
                                                                   if (isset($_SESSION['status'])) {
@@ -279,8 +311,10 @@ background-attachment:fixed !important;">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
+<!--=============Footer Start=============-->
 <?php
 include("footer.php");
 ?>
+<!--=============Footer End=============-->
 
 </html>

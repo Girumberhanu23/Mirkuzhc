@@ -63,7 +63,7 @@
                             <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="services.php">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="book.php">Book Appointment</a>
@@ -89,25 +89,26 @@
     <section id="about" class="about mt-5">
         <div class="about-title text-center">
             <h1> ABOUT US </h1>
+            <hr class="mx-auto" style="width: 100px; height: 2px; background: #0D6EFD;">
         </div>
         <div class="container-fluid">
             <!--Section description-->
             <div class="row  pt-5 pb-5">
                 <div class="col-md-5 align-items-stretch ">
-                    <img src="img/image.jpg" alt="Treating patients" class="h-100 w-100">
+                    <!-- <img src="img/office.jpg" alt="Treating patients" style="height: 100%; width:100%;"> -->
+                    <img src="img/patient.jpeg" alt="Treating patients" class="h-100 w-100">
                 </div>
                 <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
 
                     <div class="content text-white">
                         <h3 class="text-white">Our Story</h3>
                         <p class="text-white">Mirkuz Home Based Health Care PLC is a home-based health care company,
-                            established in year
-                            2013 E.C. This company founded by a one intensive care unit nurse, have experience on
-                            critical and comatose patients, hoping to extended intensive nursing care to client’s home,
+                            established in year 2013 E.C. This company founded by a one intensive care unit nurse, have experience on
+                            critical and comatose patients, hoping to extended intensive nursing care to client&#39;s home,
                             with vast experience, heavily trained professionals and portable devices. <br><br>
                             In 2013 E.C our company had taken the License from Addis Ababa City Administration, Yeka
                             Sub-City Food, Medicine, Health Care Administration and Control Authority, and started the
-                            work officially by some medical equipment’s and some clinical nurses.</p>
+                            work officially by some medical equipment&#39;s and some clinical nurses.</p>
                     </div>
 
                 </div>
@@ -131,12 +132,12 @@
 
                 </div>
                 <div class="col-md-5 align-items-stretch">
-                    <img src="img/image.jpg" alt="Treating patients" class="h-100 w-100">
+                    <img src="img/imageBp.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
             </div>
             <div class="row  pt-5 pb-5">
                 <div class="col-md-5 align-items-stretch">
-                    <img src="img/image.jpg" alt="Treating patients" class="h-100 w-100">
+                    <img src="img/needle.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
                 <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
 
@@ -186,7 +187,7 @@
 
                             <h3 class="text-center"><i class="fa fa-globe"></i></br>Mission</h3>
                             <hr>
-                            <p>Passion for Life. Keeping the client’s health, quality of life, and well-being
+                            <p>Passion for Life. Keeping the client&#39;s health, quality of life, and well-being
                                 central in the design and delivery of compassionate and dignified health care.</p>
                         </div>
                     </div>
@@ -214,7 +215,7 @@
                                 some level to the quality of the relationships that we are building. Being socially
                                 responsible is a part of the equation. We want to make a positive difference by
                                 actively seeking input from our clients and the community. We must be good
-                                listeners’, personal and approachable. The more we understand-the better we can
+                                listeners&#39;, personal and approachable. The more we understand-the better we can
                                 serve and anticipate services that are beneficial and needed in our communities.</p>
                         </div>
                     </div>
@@ -294,94 +295,9 @@
     <!----------- Our team End --------->
 
     <!--=============Footer Start=============-->
-    <footer class="text-center text-lg-start bg-primary py-3 text-white">
-
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="bi bi-gem me-3"></i>Mirkuz HC
-                        </h6>
-                        <p>
-                        <h5>Address:</h5>
-                        <p> Marathon Building, 5th floor, Office No. 510</p>
-                        <p>
-                            Addis Ababa, Yeka sub city, Wereda 08
-                        </p>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
-                        <!-- Links -->
-                        <div class="row">
-                            <div class="col-md-2">
-                                <h3><a href="facebook.com/mirkuzhc" class="me-4 text-reset">
-                                        <i class="bi bi-facebook"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="twitter.com" class="me-4 text-reset">
-                                        <i class="bi bi-twitter"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="gmail.com" class="me-4 text-reset">
-                                        <i class="bi bi-google"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="instagram.com" class="me-4 text-reset">
-                                        <i class="bi bi-instagram"></i>
-                                    </a></h3><br>
-                            </div>
-                            <div class="col-md-2">
-                                <h3><a href="linkedin.com" class="me-4 text-reset">
-                                        <i class="bi bi-linkedin"></i>
-                                    </a></h3><br>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p>
-                            <i class="bi bi-envelope me-3"></i>
-                            mirkuzhc@gmail.com
-                        </p>
-                        <p><i class="bi bi-phone me-3"></i><a href="tel:+251921379660"
-                                style="color: #fff; text-decoration:none;">
-                                +251 921-379660</a></p>
-                        <p><i class="bi bi-print me-3"></i><a href="tel:+251966020039"
-                                style="color: #fff; text-decoration:none;">
-                                +251 966-020039</a></p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 Copyright: Nano Technologies Inc.
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
     <!--=============Footer End=============-->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

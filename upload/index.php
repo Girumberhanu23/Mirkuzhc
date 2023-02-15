@@ -26,16 +26,9 @@ if (isset($_GET['error'])) : ?>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/datepicker.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .inner-layer {
-            overflow: hidden;
-        }
-    </style>
 </head>
 
-<body style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/firstAid.jpg) !important;
-background-size: cover !important;
-background-attachment:fixed !important;">
+<body>
 
     <!--=============Header Start=============-->
     <header>
@@ -55,7 +48,7 @@ background-attachment:fixed !important;">
         <!--Navbar Start-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="index.php">
+                <a class="navbar-brand" href="../index.php">
                     <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,20 +56,11 @@ background-attachment:fixed !important;">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                    <li class="nav-item">
+                            <a class="nav-link" href="../display.php">Booked Appointments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="book.php">Book Appointment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php#contact">Contact us</a>
+                            <a class="nav-link" href="view.php">Nurses</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">

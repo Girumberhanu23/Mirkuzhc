@@ -1,6 +1,29 @@
 <?php
+session_start();
 include('conn.php');
 
+if (isset($_POST['delete_nurse'])) {
+    $id = $_POST['delete_nurse'];
+
+    try {
+        $query = "DELETE FROM nurses WHERE id=:id";
+        $statement = $conn->prepare($query);
+        $data = [':id' => $id];
+        $query_execute = $statement->execute($data);
+
+        if ($query_execute) {
+            $_SESSION['status'] = "Deleted Successfully";
+            header('Location: manageBookings.php');
+            exit(0);
+        } else {
+            $_SESSION['status'] = "Not Deleted";
+            header('Location: manageBookings.php');
+            exit(0);
+        }
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,13 +95,29 @@ include('conn.php');
     <div>
         <!--<center><h1>Welcome <?php echo $_SESSION["username"]; ?></h1></center> -->
     </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-4">
+        <?php if (isset($_SESSION['status'])) : ?>
+          <h5 class="alert alert-success alert-dismissible"><?= $_SESSION['status']; ?>
+            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </h5>
+        <?php
+          unset($_SESSION['status']);
+        endif;
+        ?>
+      </div>
+    </div>
+  </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
                 <div class="card-header">
                         <h3>Booked Appointments List
-                            <a href="manageBookings.php" class="btn btn-primary float-end">Manage Bookings</a>
+                            <a href="display.php" class="btn btn-danger float-end">Back</a>
                         </h3>
                     </div>
                     <div class="card-body">
@@ -94,7 +133,7 @@ include('conn.php');
                                     <th>House</th>
                                     <th>Passport</th>
                                     <th>Service</th>
-                                    <th>Booked On</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -118,7 +157,13 @@ include('conn.php');
                                             <td><?= $row->House; ?></td>
                                             <td><?= $row->Passport; ?></td>
                                             <td><?= $row->Service; ?></td>
-                                            <td><?= $row->bookedOn; ?></td>
+                                            <td>
+                                                <form action="manageBookings.php" method="post">
+                                                    <p class="mx-3"></p>
+                                                    <button type="submit" name="delete_nurse" value="<?= $row->id; ?>" class="btn btn-danger">Delete</button>
+                                                </form>
+
+                                            </td>
                                         </tr>
                                     <?php
                                     }

@@ -65,7 +65,7 @@ if (isset($_POST['delete_license'])) {
         <!--Navbar Start-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="index.php">
+                <a class="navbar-brand" href="../index.php">
                     <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,19 +74,10 @@ if (isset($_POST['delete_license'])) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="../display.php">Booked Appointments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="book.php">Book Appointment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php#contact">Contact us</a>
+                            <a class="nav-link" href="view.php">Nurses</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
@@ -103,13 +94,13 @@ if (isset($_POST['delete_license'])) {
     </header>
     <!--=============Header End=============-->
     <div>
-        <!--<center><h1>Welcome <?php echo $_SESSION["username"]; ?></h1></center> -->
+        <!--<center><h1>Welcome <?php // echo $_SESSION["username"]; ?></h1></center> -->
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
                 <?php if (isset($_SESSION['status'])) : ?>
-                    <h5 class="alert alert-success"><?= $_SESSION['status']; ?> </h5>
+                    <h5 class="alert alert-success alert-dismissible"><?= $_SESSION['status']; ?> </h5>
                 <?php
                     unset($_SESSION['status']);
                 endif;
@@ -133,7 +124,7 @@ if (isset($_POST['delete_license'])) {
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>License</th>
-                                    <th>Edit</th>
+                                    <!-- <th>Edit</th> -->
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -152,9 +143,10 @@ if (isset($_POST['delete_license'])) {
                                             <td><?= $row->id; ?></td>
                                             <td><?= $row->name; ?></td>
                                             <td class="text-center w-25"><img class="card-img-top img-thumbnail w-50" src="uploads/<?= $row->image_url; ?>" alt="Nurse License Image"></td>
-                                            <td><a name="edit_license" class="btn btn-warning" href="edit_nurse.php?id=<?= $row->id; ?>">Edit</a></td>
+                                            <!-- <td><a name="edit_license" class="btn btn-warning" href="edit_nurse.php?id=<?//= $row->id; ?>">Edit</a></td> -->
                                             <td>
                                                 <form action="view.php" method="post">
+                                                    <p class="mx-3"></p>
                                                     <button type="submit" name="delete_license" value="<?= $row->id; ?>" class="btn btn-danger">Delete</button>
                                                 </form>
 
