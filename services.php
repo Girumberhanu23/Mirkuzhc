@@ -47,8 +47,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                    <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
-                </a>
+                        <img src="img/Logo.png" alt="" width="90px" height="90px">
+                        &nbsp;<strong>Mirkuz hc</strong>
+                    </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -182,7 +183,7 @@
 
                     <div class="content text-white py-5">
                         <h3>Our Objective</h3>
-                        <ul class="qualities-indicator">
+                        <ul class="qualities-indicator text-justify">
                             <li>To achieving the highest standards in the delivery of Private Health Care, by providing reliable Health Care Services that best meets the needs and expectations of our clients.</li>
                             <li>To participate in Country&#39;s Health Care market by improving its quality of Services as effective as possible.</li>
                         </ul>

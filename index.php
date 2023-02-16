@@ -53,7 +53,8 @@
                 <div class="container-fluid">
                     <a class="navbar-brand theme-text" href="index.php">
                         <img src="img/Logo.png" alt="" width="90px" height="90px">
-                        &nbsp;Mirkuz hc</a>
+                        &nbsp;<strong>Mirkuz hc</strong>
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -150,17 +151,17 @@
     <!----------- Work With Us Start --------->
     <section class="container">
         <div class="row">
-        <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
-                        <h1 class="mb-3">Now We Are Ready to Give Our Services for</h1>
-                        <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
-                </div>
+            <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
+                <h1 class="mb-3">Now We Are Ready to Give Our Services for</h1>
+                <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
+            </div>
             <div class="col-sm-6 col-lg-3 mb-5">
                 <div class="card shadow h-100">
                     <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
                         <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-hotel"></i></h1>
                         <h3 class="card-title text-center">Hotels</h3>
-                        <p class="card-text pb-5">By providing 24 hr./12 hr. our health care service and visit program to hotel guests, to increase customer satisfaction by decreasing unnecessary visit to clinics and hospital, unless it's indicated.</p>
+                        <p class="card-text pb-5 text-justify">By providing 24 hr./12 hr. our health care service and visit program to hotel guests, to increase customer satisfaction by decreasing unnecessary visit to clinics and hospital, unless it's indicated.</p>
                     </div>
                 </div>
             </div>
@@ -170,7 +171,7 @@
                     <div class="card-body">
                         <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-person-digging"></i></h1>
                         <h3 class="card-title text-center">Construction Sites</h3>
-                        <p class="card-text pb-5">Helps employees to have a health working environment, by improving working safety and gave them a first Aid by our health professional.</p>
+                        <p class="card-text pb-5 text-justify">Helps employees to have a health working environment, by improving working safety and gave them a first Aid by our health professional.</p>
                     </div>
                 </div>
             </div>
@@ -180,7 +181,7 @@
                     <div class="card-body">
                         <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-school"></i></h1>
                         <h3 class="card-title text-center">Schools</h3>
-                        <p class="card-text">By assigning health professionals, improve the school compound to be healthier, safer and risk free, incase if there need for assistance, the nurse will give care to the child, if the condition is worse need for a better health facility, the nurse will assist with the escort.</p>
+                        <p class="card-text pb-3 text-justify">By assigning health professionals, improve the school compound to be healthier, safer and risk free, incase if there need for assistance, the nurse will give care to the child, if the condition is worse need for a better health facility, the nurse will assist with the escort.</p>
                     </div>
                 </div>
             </div>
@@ -191,7 +192,7 @@
                     <div class="card-body">
                         <h1 class="text-center card-img-top mt-4"><i class="fa fa-duotone fa-building-ngo"></i></h1>
                         <h3 class="card-title text-center">Other Governmental and NGO offices</h3>
-                        <p class="card-text pb-5">Our doors are wide open to any organization willing to work with us!</p>
+                        <p class="card-text pb-5 text-justify">Our doors are wide open to any organization willing to work with us!</p>
                     </div>
                 </div>
             </div>

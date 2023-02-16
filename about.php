@@ -41,8 +41,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                    <h2 class="fw-bold  mb-2 mb-lg-0 mb-sm-0">MirkuzHc</h2>
-                </a>
+                        <img src="img/Logo.png" alt="" width="90px" height="90px">
+                        &nbsp;<strong>Mirkuz hc</strong>
+                    </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
@@ -94,7 +95,7 @@
 
                     <div class="content text-white">
                         <h3 class="text-white">Our Story</h3>
-                        <p class="text-white">Mirkuz Home Based Health Care PLC is a home-based health care company,
+                        <p class="text-white text-justify">Mirkuz Home Based Health Care PLC is a home-based health care company,
                             established in year 2013 E.C. This company founded by a one intensive care unit nurse, have experience on
                             critical and comatose patients, hoping to extended intensive nursing care to client&#39;s home,
                             with vast experience, heavily trained professionals and portable devices. <br><br>
@@ -111,7 +112,7 @@
 
                     <div class="content text-white">
                         <h3 class="text-white">Our Story</h3>
-                        <p class="text-white">Here in Mirkuz home based health care we provide care and nursing support
+                        <p class="text-white  text-justify">Here in Mirkuz home based health care we provide care and nursing support
                             across Addis Ababa
                             and nearby cities. We believe quality in home care begins with respect and a good attitude.
                             <br><br>
@@ -135,7 +136,7 @@
 
                     <div class="content">
                         <h3 class="text-white">Our Story</h3>
-                        <p class="text-white">We listen to our clients, customize our services to their personal
+                        <p class="text-white  text-justify">We listen to our clients, customize our services to their personal
                             situations, and deliver
                             care that is focused on improving their quality of life, health and well-being. All clients
                             will be treated with dignity, compassion, empathy, honesty and integrity. We have respect
@@ -159,7 +160,7 @@
                             <h3 class="text-center"><i class="fa fa-book"></i></br>Vision</h3>
                             <hr>
                             <p>
-                            <ul class="vision-text">
+                            <ul class="vision-text text-justify">
                                 <li>To be known and valued for providing the highest standard of in-home care and
                                     facility nursing care in Ethiopia and East Africa as a result of our high
                                     standard of excellence, culture of innovation, and through our compassionate and
@@ -179,7 +180,7 @@
 
                             <h3 class="text-center"><i class="fa fa-globe"></i></br>Mission</h3>
                             <hr>
-                            <p>Passion for Life. Keeping the client&#39;s health, quality of life, and well-being
+                            <p class="text-justify">Passion for Life. Keeping the client&#39;s health, quality of life, and well-being
                                 central in the design and delivery of compassionate and dignified health care.</p>
                         </div>
                     </div>
@@ -190,7 +191,7 @@
                         <div class="about-item shadow-lg rounded h-75">
                             <h3 class="text-center"><i class="fa fa-user-shield"></i></br>Safety</h3>
                             <hr>
-                            <p class="pt-2">Mirkuz Home Based Health Care Service strives to manage critical aspects of risks to
+                            <p class="pt-2 text-justify">Mirkuz Home Based Health Care Service strives to manage critical aspects of risks to
                                 clients and staffs. Safety is a top priority for us, and we are dedicated to being
                                 proactive in support of it. We passionately care about the safety of our clients and
                                 staffs, and we recognize that we must be diligent in identifying potential safety
@@ -202,7 +203,7 @@
                         <div class="about-item shadow-lg rounded h-75">
                             <h3 class="text-center"><i class="fa fa-group-arrows-rotate"></i></br>Community</h3>
                             <hr>
-                            <p class="pt-2">We are determined to have strong, mutually beneficial relationships with our
+                            <p class="pt-2 text-justify">We are determined to have strong, mutually beneficial relationships with our
                                 community partners and our community. Everyone in our organization contributes on
                                 some level to the quality of the relationships that we are building. Being socially
                                 responsible is a part of the equation. We want to make a positive difference by
@@ -215,7 +216,7 @@
                         <div class="about-item shadow-lg rounded h-75">
                             <h3 class="text-center"><i class="fa fa-check"></i></br>Integrity and Ethics</h3>
                             <hr>
-                            <p class="pt-2">We are honest, accountable, transparent and responsible in our approach. We embrace
+                            <p class="pt-2 text-justify">We are honest, accountable, transparent and responsible in our approach. We embrace
                                 high ethical standards, complete honesty, and fairness to our clients, staffs and
                                 community partners. We have ethical policies and procedures in place, as well as a
                                 framework to guide and support our staff to high ethical standards. We investigate
@@ -230,13 +231,13 @@
     <!--About Us End-->
 
     <!----------- Our team Start --------->
-    <section id="nurses" class="mb-5">
-    <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
-        <h1 class="mb-3 font-weight-bold">Our team</h1>
-        <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
-        <p class="mt-4">Meet our team of experienced health professionals. All professionals working with us are certified. Take a glance at some of the professionals available today.</p>
-    </div>
-        <div class="d-flex justify-content-around">
+    <section id="nurses" class="mb-5 container">
+        <div class="col-lg-12 col-md-12 col-xs-12 text-center p-5">
+            <h1 class="mb-3 font-weight-bold">Our team</h1>
+            <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
+            <p class="mt-4">Meet our team of experienced health professionals. All professionals working with us are certified. Take a glance at some of the professionals available today.</p>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap">
             <?php
             $query = "SELECT * FROM nurses";
             $statement = $conn->prepare($query);
@@ -251,7 +252,7 @@
                         <a href="upload/uploads/<?= $row->image_url; ?>" target="_self">
                             <div class="work shadow ">
                                 <img class="card-img-top" src="upload/uploads/<?= $row->image_url; ?>" height=240 alt="Card image cap">
-                                <h3 class="card-title text-center pb-5"><i class="fa fa-duotone fa-stethoscope"> </i> <?= $row->name; ?></h3>
+                                <h3 class="card-title text-center pb-5 mt-3"><i class="fa fa-duotone fa-stethoscope"> </i> <?= $row->name; ?></h3>
                                 <div class="layer">
                                     <h3><i class="fa fa-duotone fa-stethoscope"> </i> <?= $row->name; ?></h3>
                                     <p>Display the license of this health professional.</p>
