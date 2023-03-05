@@ -2,10 +2,22 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="mirkuz">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="mirkuz, home care, health care">
+    <meta property="og:title" content="Mirkuz Home Based Health Care Service">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mirkuzhc.care/">
+    <meta property="og:image" content="img/Logo.png">
+    <meta property="og:site_name" content="Mirkuz Home Based Health Care Service">
+    <meta property="og:description" content="Mirkuz Home Based Health Care PLC is a home-based health care company, established in year 2013 E.C.">
+
+
     <title>Mirkuz Home Care</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -18,6 +30,7 @@
 
     <!-- End Bootstrap CSS -->
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--Custom Css-->
     <link rel="stylesheet" href="./CSS/style.css">
     <!--End Custom Css-->
@@ -87,8 +100,15 @@
                 </div>
             </nav>
             <!-- navbar code -->
-            <div class="middle d-flex justify-content-end align-items-end mt-5" style="height: 65vh; width: 75%;">
-                <h3 class="text-white display-3 fw-bold mt-5">Building a Healthy Community <span class="theme-text">One Individual at a Time.</span>.<span class="theme-text">.</span></h3>
+            <div class="d-flex flex-column justify-content-center align-items-center mt-2" style="height: 65vh;">
+                <p class="h3 text-white display-4 fw-bold mt-5">Your Health <span class="theme-text">Support!</span></p>
+                <p class="text-white h5">Stay comfortable at your lovely home.</p>
+                <a href="book.php" class="btn btn-outline-light mt-5">
+                    <h5 class="pt-1">Book an appointment</h5>
+                </a>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+
             </div>
         </div>
         <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -102,7 +122,7 @@
 
 
     <!-- ======= Book Section ======= -->
-    <div class="container-fluid mt-5">
+    <!-- <div class="container-fluid mt-5">
         <div class="row">
             <div class="book">
                 <a href="book.php" class="booking pt-5">
@@ -110,7 +130,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- ======= Book Section ======= -->
 
@@ -120,11 +140,11 @@
             <!--Section description-->
             <div class="row  pt-5 pb-5">
 
-                <div class="col-md-5 align-items-stretch">
+                <div class="col-md-5 align-items-stretch" data-aos="fade-right">
                     <img src="img/machine.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
 
-                <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
+                <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary" data-aos="fade-left">
 
                     <div class="content text-white py-5">
                         <h3>What makes us different?</h3>
@@ -155,7 +175,7 @@
                 <h1 class="mb-3">Now We Are Ready to Give Our Services for</h1>
                 <hr class="mx-auto" style="width: 140px; height: 2px; background: #0D6EFD;">
             </div>
-            <div class="col-sm-6 col-lg-3 mb-5">
+            <div class="col-sm-6 col-lg-3 mb-5" data-aos="fade-up">
                 <div class="card shadow h-100">
                     <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
@@ -165,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3 mb-5">
+            <div class="col-sm-6 col-lg-3 mb-5" data-aos="fade-down">
                 <div class="card shadow h-100">
                     <!-- <img class="card-img-top" src="img/construction.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
@@ -175,7 +195,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3 mb-5">
+            <div class="col-sm-6 col-lg-3 mb-5" data-aos="fade-up">
                 <div class="card shadow h-100">
                     <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
@@ -186,7 +206,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-3 mb-5">
+            <div class="col-sm-6 col-lg-3 mb-5" data-aos="fade-down">
                 <div class="card shadow h-100">
                     <!-- <img class="card-img-top" src="img/school.jpg" height=240 alt="Card image cap"> -->
                     <div class="card-body">
@@ -219,27 +239,23 @@
                         <div class="carousel-inner">
                             <div class="item carousel-item active">
                                 <h1 style="color: #0D6EFD !important;"><i class="fa-solid fa-quote-right"></i></h1>
-                                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-                                    sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel,
-                                    semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius
-                                    nibh non aliquet.</p>
-                                <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
+                                <p class="testimonial">I would like to thank mirkuz home care.
+                                    They give best service and all are ethical.
+                                    They work on patients as they are family they really care and serve with joy. I want to thank them what they have done to my father.</p>
+                                <p class="overview"><b>Fatuma Mussa</b>, Satisfied Customer</p>
                             </div>
                             <div class="item carousel-item">
                                 <h1 style="color: #0D6EFD !important;"><i class="fa-solid fa-quote-right"></i></h1>
-                                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque
-                                    eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra
-                                    sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh,
-                                    facilisis gravida odio.</p>
-                                <p class="overview"><b>Dauglas McNun</b>, Financial Advisor</p>
+                                <p class="testimonial">Our professional cooperation with Mirkuz, which is still at an early stage and very flexible, is designed to be our investment on a long-term cooperation with Mirkuz in health services especially during difficult times. <br/>
+
+                                    So let us pull through together while we learn about our changing needs and the advancements in medical services in Ethiopia have to offer in the future. </p>
+                                <p class="overview"><b>Paulos Asrat</b>, Satisfied Customer</p>
                             </div>
                             <div class="item carousel-item">
                                 <h1 style="color: #0D6EFD !important;"><i class="fa-solid fa-quote-right"></i></h1>
-                                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id
-                                    lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
-                                    tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa.
-                                    Etiam hendrerit dolor eget rutrum.</p>
-                                <p class="overview"><b>Hellen Wright</b>, Athelete</p>
+                                <p class="testimonial">Family is the most important thing in the world.To be able to find some one who give them the best care anyone could ask for is a lottery!!! That's what "Mirkuz" is for my family.
+                                    Our family is always great full for what you done for us. <br/>Mirkuz is always our number one choice!!!!</p>
+                                <p class="overview"><b>Liyu yemshaw</b>, Satisfied Customer</p>
                             </div>
                         </div>
                         <!-- Carousel Controls -->
@@ -316,7 +332,7 @@
 
                         </div>
                         <div class="col-mg-12 d-flex justify-content-center">
-                            <button type="submit" class="btn-primary bg-primary w-25 my-3 contact-btn">Submit</button>
+                            <button type="submit" class="btn btn-primary bg-primary w-25 my-3 contact-btn">Submit</button>
                         </div>
 
                     </form>
@@ -343,13 +359,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script>
         var scriptURL;
 
         function sendToManager() {
             if (document.getElementById("manager").checked) {
-                scriptURL = 'https://script.google.com/macros/s/AKfycbz9x66_ZM4iHeo7Kc616Hl_DptghgZq66DQg8_udAcPLxZr1XYWctzof3T2IiMiriRdpg/exec';
+                scriptURL = 'https://script.google.com/macros/s/AKfycbwk5-gpLgYlQ_DBgiGFI5Zas0ybJ3cPw42XIB62hj7_reRTO7-0oA9oHSCxqLesKul9/exec';
                 document.getElementById("managerlbl").style.color = "#fff !important";
                 document.getElementById("managerlbl").style.backgroundColor = "#100f36";
                 document.getElementById("managerlbl").style.fontWeight = 700;
@@ -362,7 +377,7 @@
 
         function sendToFinance() {
             if (document.getElementById("finance").checked) {
-                scriptURL = 'finan';
+                scriptURL = 'https://script.google.com/macros/s/AKfycbxzPcxoFybaUfMjx6iJk2izU29hj8Wtg_nQjicseZQdndF1sPX9uu0GJJUiHskd0Elruw/exec';
                 document.getElementById("financelbl").style.backgroundColor = "#100f36";
                 document.getElementById("financelbl").style.fontWeight = 700;
                 document.getElementById("managerlbl").style.backgroundColor = "#0d6efd";
@@ -374,7 +389,7 @@
 
         function sendToMarketing() {
             if (document.getElementById("marketing").checked) {
-                scriptURL = 'market';
+                scriptURL = 'https://script.google.com/macros/s/AKfycbwkuAR7NSm_4wdrmbsReXrz6KVOcxOrh1c48WFnxxP-8mK3ajAK-C35c1P-lWT_nn5p/exec';
                 document.getElementById("marketinglbl").style.backgroundColor = "#100f36";
                 document.getElementById("marketinglbl").style.fontWeight = 700;
                 document.getElementById("managerlbl").style.backgroundColor = "#0d6efd";
@@ -409,6 +424,14 @@
                     form.reset()
                 })
         })
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 500
+            
+        });
     </script>
 </body>
 

@@ -29,6 +29,8 @@ if (isset($_POST['delete_nurse'])) {
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +85,7 @@ if (isset($_POST['delete_nurse'])) {
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="login.php">
-                                <i class="bi bi-person "></i>
+                                <i class="bi bi-person "></i>Logout
                             </a>
                         </li>
                     </ul>

@@ -24,36 +24,40 @@ if (isset($_POST["submit"])) {
   //     $_SESSION['status'] = "Email exists try another!";
   //   } else {
 
-      try {
-        $insert = $conn->prepare("INSERT INTO book(name,phone,email,date,subcity,city,house,passport,service)VALUE(?,?,?,?,?,?,?,?,?)");
-        if ($insert->execute([
-          $name, $phone, $email, $date, $subcity, $city, $house, $passport, $service
-        ])) {
-          $_SESSION['status'] = "Appointment Added Successfully!";
-          //          header('Location: book.php#msg');
-        }
-      } catch (PDOException $e) {
-        $_SESSION['status'] = $e->getMessage();
-      }
+  try {
+    $insert = $conn->prepare("INSERT INTO book(name,phone,email,date,subcity,city,house,passport,service)VALUE(?,?,?,?,?,?,?,?,?)");
+    if ($insert->execute([
+      $name, $phone, $email, $date, $subcity, $city, $house, $passport, $service
+    ])) {
+      $_SESSION['status'] = "Appointment Added Successfully!";
+      //          header('Location: book.php#msg');
     }
-
-  // } catch (PDOException $e) {
-  //   $_SESSION['status'] = "error" . $e->getmessage();
-  // }
-
-
-  // Email to User and Admin
-  // $mailto = "girumberhanugb4@gmail.com";
-  // $userSubject = "Your Appointment has been set successfully! We will contact you shortly. \n Mirkuz Home Care Services"; // For Clients
-  // $adminSubject = $name. " made the following Appointment";
-  // $headerAdmin = "From: ". $name;
-  // $headerUser = "Mirkuz Home Care Service";
-  // $message = "Patient Name: " .$name. "\nPhone Number:" .$phone. "\nEmail: " .$email. "\nAppointment Date: " .$date. "\nSubcity: " .$subcity. "\nCity: " .$city. "\nHouse Number: " .$house. "\nPassport Number: " .$passport. "\nService Requested: " .$service;
-  // $result = mail($mailto, $adminSubject, $message, $headerAdmin);
-  // $result = mail($email, $userSubject, $message, $headerUser);
-
-
+  } catch (PDOException $e) {
+    $_SESSION['status'] = $e->getMessage();
+  }
 // }
+
+// } catch (PDOException $e) {
+//   $_SESSION['status'] = "error" . $e->getmessage();
+// }
+
+
+// Email to User and Admin
+$manager = "dagnhc@gmail.com";
+$finance = "hiwetsintayehu3@gmail.com";
+$marketing = "birukpeace@gmail.com";
+$userSubject = "Your Appointment has been set successfully! We will contact you shortly. \n Mirkuz Home Care Services"; // For Clients
+$adminSubject = $name. " made the following Appointment";
+$headerAdmin = "From: ". $name;
+$headerUser = "Mirkuz Home Care Service";
+$message = "Patient Name: " .$name. "\nPhone Number:" .$phone. "\nEmail: " .$email. "\nAppointment Date: " .$date. "\nSubcity: " .$subcity. "\nCity: " .$city. "\nHouse Number: " .$house. "\nPassport Number: " .$passport. "\nService Requested: " .$service;
+$result = mail($manager, $adminSubject, $message, $headerAdmin);
+$result = mail($finance, $adminSubject, $message, $headerAdmin);
+$result = mail($marketing, $adminSubject, $message, $headerAdmin);
+$result = mail($email, $userSubject, $message, $headerUser);
+
+
+}
 $conn = null;
 
 ?>
@@ -61,9 +65,21 @@ $conn = null;
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="mirkuz">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Mirkuz Home Based Health Care Service">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mirkuzhc.care/">
+  <meta property="og:image" content="img/Logo.png">
+  <meta property="og:site_name" content="Mirkuz Home Based Health Care Service">
+  <meta property="og:description" content="Mirkuz Home Based Health Care PLC is a home-based health care company, established in year 2013 E.C.">
+
+
   <title>Book Appointment</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -108,9 +124,9 @@ background-attachment:fixed !important;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="index.php">
-                        <img src="img/Logo.png" alt="" width="90px" height="90px">
-                        &nbsp;<strong>Mirkuz hc</strong>
-                    </a>
+          <img src="img/Logo.png" alt="" width="90px" height="90px">
+          &nbsp;<strong>Mirkuz hc</strong>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="bi bi-list"></span>
         </button>

@@ -53,16 +53,6 @@ svg.wave {
   position: absolute;
   bottom: -70px;
 }
-/* .middle {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  height: 80vh;
-  width: 70%;
-} */
-/* .middle h1 {
-  font-size: 70px;
-} */
 
 
 
@@ -80,25 +70,7 @@ svg.wave {
 
 
 
-.book {
-  background: #0D6EFD;
-  margin: 0;
-  padding-top: 15px;
-}
-.book:hover{
-  background: radial-gradient(rgba(255, 255, 255, 0.6), #0D6EFD);
-} 
-.book:hover h1{
-  color: black !important;
-}
-.book .booking {
-  margin: 0;
-  padding: 50px 0px;
-  display: block;
-  text-align: center;
-  text-transform: capitalize;
-  text-decoration: none;
-}
+
 
 
 /*****************************
@@ -364,8 +336,8 @@ svg.wave {
 .about-item:hover i,
 .about-item:hover h3,
 .about-item:hover p,
-.about-item:hover p .vision-text {
-  color: #fff;
+.about-item:hover p ul li {
+  color: #fff !important;
 }
 
 .about-item:hover hr {

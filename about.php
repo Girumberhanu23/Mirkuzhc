@@ -3,9 +3,21 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="mirkuz">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mirkuz Home Based Health Care Service">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mirkuzhc.care/">
+    <meta property="og:image" content="img/Logo.png">
+    <meta property="og:site_name" content="Mirkuz Home Based Health Care Service">
+    <meta property="og:description" content="Mirkuz Home Based Health Care PLC is a home-based health care company, established in year 2013 E.C.">
+
+
     <title>About Us</title>
 
     <!-- Bootstrap CSS -->
@@ -17,6 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <!-- End Bootstrap CSS -->
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--Custom Css-->
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
@@ -41,9 +54,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                        <img src="img/Logo.png" alt="" width="90px" height="90px">
-                        &nbsp;<strong>Mirkuz hc</strong>
-                    </a>
+                    <img src="img/Logo.png" alt="" width="90px" height="90px">
+                    &nbsp;<strong>Mirkuz hc</strong>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
@@ -93,8 +106,8 @@
                 </div>
                 <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
 
-                    <div class="content text-white">
-                        <h3 class="text-white">Our Story</h3>
+                    <div class="content text-white my-3">
+                        <h3 class="text-white mt-2">Our Story</h3>
                         <p class="text-white text-justify">Mirkuz Home Based Health Care PLC is a home-based health care company,
                             established in year 2013 E.C. This company founded by a one intensive care unit nurse, have experience on
                             critical and comatose patients, hoping to extended intensive nursing care to client&#39;s home,
@@ -108,11 +121,11 @@
             </div>
             <div class="row  pt-5 pb-5">
 
-                <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
+                <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary" data-aos="fade-right">
 
                     <div class="content text-white">
                         <h3 class="text-white">Our Story</h3>
-                        <p class="text-white  text-justify">Here in Mirkuz home based health care we provide care and nursing support
+                        <p class="text-white text-justify">Here in Mirkuz home based health care we provide care and nursing support
                             across Addis Ababa
                             and nearby cities. We believe quality in home care begins with respect and a good attitude.
                             <br><br>
@@ -124,15 +137,15 @@
                     </div>
 
                 </div>
-                <div class="col-md-5 align-items-stretch">
+                <div class="col-md-5 align-items-stretch" data-aos="fade-left">
                     <img src="img/imageBp.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
             </div>
             <div class="row  pt-5 pb-5">
-                <div class="col-md-5 align-items-stretch">
+                <div class="col-md-5 align-items-stretch" data-aos="fade-right">
                     <img src="img/needle.jpg" alt="Treating patients" class="h-100 w-100">
                 </div>
-                <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary">
+                <div class="col-md-7 d-flex flex-column justify-content-center align-items-stretch bg-primary"  data-aos="fade-left">
 
                     <div class="content">
                         <h3 class="text-white">Our Story</h3>
@@ -155,12 +168,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <div class="about-item shadow-lg rounded h-75">
+                        <div class="about-item shadow-lg rounded h-75" data-aos="fade-down">
 
                             <h3 class="text-center"><i class="fa fa-book"></i></br>Vision</h3>
                             <hr>
                             <p>
-                            <ul class="vision-text text-justify">
+                            <ul class="text-justify">
                                 <li>To be known and valued for providing the highest standard of in-home care and
                                     facility nursing care in Ethiopia and East Africa as a result of our high
                                     standard of excellence, culture of innovation, and through our compassionate and
@@ -175,7 +188,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <div class="about-item shadow-lg rounded h-75">
+                        <div class="about-item shadow-lg rounded h-75" data-aos="fade-down">
 
 
                             <h3 class="text-center"><i class="fa fa-globe"></i></br>Mission</h3>
@@ -188,7 +201,7 @@
                 <div class="row">
                     <h2 class="text-center"> Values </h2>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                        <div class="about-item shadow-lg rounded h-75">
+                        <div class="about-item shadow-lg rounded h-75" data-aos="fade-up">
                             <h3 class="text-center"><i class="fa fa-user-shield"></i></br>Safety</h3>
                             <hr>
                             <p class="pt-2 text-justify">Mirkuz Home Based Health Care Service strives to manage critical aspects of risks to
@@ -200,7 +213,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                        <div class="about-item shadow-lg rounded h-75">
+                        <div class="about-item shadow-lg rounded h-75" data-aos="fade-down">
                             <h3 class="text-center"><i class="fa fa-group-arrows-rotate"></i></br>Community</h3>
                             <hr>
                             <p class="pt-2 text-justify">We are determined to have strong, mutually beneficial relationships with our
@@ -213,7 +226,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                        <div class="about-item shadow-lg rounded h-75">
+                        <div class="about-item shadow-lg rounded h-75" data-aos="fade-up">
                             <h3 class="text-center"><i class="fa fa-check"></i></br>Integrity and Ethics</h3>
                             <hr>
                             <p class="pt-2 text-justify">We are honest, accountable, transparent and responsible in our approach. We embrace
@@ -281,6 +294,14 @@
     include('footer.php');
     ?>
     <!--=============Footer End=============-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 1000
+            
+        });
+    </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

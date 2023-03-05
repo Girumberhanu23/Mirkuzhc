@@ -34,7 +34,7 @@
                     <!-- Grid row -->
                     <div class="row mt-3">
                         <!-- Grid column -->
-                        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <div class="col-md-4 mx-auto mb-4">
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold mb-4">
                                 <i class="bi bi-gem me-3"></i>Mirkuz HC
@@ -50,32 +50,27 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+                        <div class="col-md-4 mb-4 w-100">
                             <!-- Links -->
                             <div class="row">
-                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-3">
                                     <h3><a href="http://www.facebook.com/mirkuzhc" class="me-4 text-reset">
                                             <i class="bi bi-facebook"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-3">
                                     <h3><a href="http://www.tiktok.com/mirkuze2" class="me-4 text-reset">
                                             <i class="bi bi-tiktok"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-3">
                                     <h3><a href="mailto:mirkuzhc@gmail.com" class="me-4 text-reset">
                                             <i class="bi bi-google"></i>
                                         </a></h3><br>
                                 </div>
-                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-3">
                                     <h3><a href="http://www.instagram.com/mirkuzhc" class="me-4 text-reset">
                                             <i class="bi bi-instagram"></i>
-                                        </a></h3><br>
-                                </div>
-                                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <h3><a href="http://www.linkedin.com" class="me-4 text-reset">
-                                            <i class="bi bi-linkedin"></i>
                                         </a></h3><br>
                                 </div>
                             </div>
@@ -83,7 +78,7 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <div class="col-md-4 mx-auto mb-md-0 mb-4">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Contact

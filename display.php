@@ -6,6 +6,8 @@ include('conn.php');
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,10 +43,10 @@ include('conn.php');
         <!--Navbar Start-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-               <a class="navbar-brand" href="index.php">
-                        <img src="img/Logo.png" alt="" width="90px" height="90px">
-                        &nbsp;<strong>Mirkuz hc</strong>
-                    </a>
+                <a class="navbar-brand" href="index.php">
+                    <img src="img/Logo.png" alt="" width="90px" height="90px">
+                    &nbsp;<strong>Mirkuz hc</strong>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
@@ -59,8 +61,8 @@ include('conn.php');
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login.php">
-                                <i class="bi bi-person "></i>
+                            <a class="nav-link" onclick="logout()" href="login.php" style="cursor: pointer;">
+                                <i class="bi bi-person "></i>Logout
                             </a>
                         </li>
                     </ul>
@@ -77,7 +79,7 @@ include('conn.php');
         <div class="row">
             <div class="col-md-12 mt-4">
                 <div class="card">
-                <div class="card-header">
+                    <div class="card-header">
                         <h3>Booked Appointments List
                             <a href="manageBookings.php" class="btn btn-primary float-end">Manage Bookings</a>
                         </h3>
@@ -133,7 +135,7 @@ include('conn.php');
                                 ?>
                             </tbody>
                         </table>
-                        
+
 
                     </div>
                 </div>
@@ -142,6 +144,61 @@ include('conn.php');
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+        import {
+            getDatabase,
+            set,
+            ref,
+            update
+        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCEMpGBVy_7Hq4unG37cg0aglUZ1zPj3Rw",
+            authDomain: "mirkuz-home-care.firebaseapp.com",
+            databaseURL: "https://mirkuz-home-care-default-rtdb.firebaseio.com",
+            projectId: "mirkuz-home-care",
+            storageBucket: "mirkuz-home-care.appspot.com",
+            messagingSenderId: "466124354657",
+            appId: "1:466124354657:web:8a2585f80e38b1076f2620",
+            measurementId: "G-1FEDHCRYKJ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const database = getDatabase(app);
+
+
+        function logOut() {
+            firebase.auth().signOut()
+        }
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                console.log(user)
+            } else {
+                console.log('signout success')
+                M.toast({
+                    html: "signout success",
+                    classes: "green"
+                })
+            }
+        });
+    </script>
 </body>
 
 </html>

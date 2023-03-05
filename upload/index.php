@@ -9,6 +9,7 @@ if (isset($_GET['error'])) : ?>
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,8 +67,8 @@ if (isset($_GET['error'])) : ?>
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">
-                                <i class="bi bi-person "></i>
+                            <a class="nav-link" href="../login.php">
+                                <i class="bi bi-person "></i>Logout
                             </a>
                         </li>
                     </ul>

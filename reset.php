@@ -7,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Reset Password</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
@@ -84,40 +84,31 @@
     <div class="container login-form mb-5">
         <div class="row mt-4 justify-content-center">
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="offest-md-4">
-                            <h1 class="text-center mt-4 mb-4 fw-bolder text-primary">Login</h1>
-                            <form class="form-login">
+                            <h1 class="text-center mt-4 mb-4 fw-bolder text-primary">Password Recovery</h1>
+                            <form class="form-login" action="javascript:void(0)">
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Email address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Email" name="email" id="email" required>
-                                </div>
-                                <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label " for="form2Example2">Password</label>
-                                    <!-- Simple link -->
-                                    
-                                    <input type="password" placeholder="Password" class="form-control" name="psw" id="psw" required>
-                                    <a href="reset.php" class="float-end text-primary mt-2 mb-4">Forgot password?</a>
+                                    <input type="text" class="form-control resetEmail" placeholder="Enter Email" name="resetEmail" id="resetEmail" required>
                                 </div>
 
 
 
+                                <!-- Submit button -->
+                                <div class="col-md-12">
+                                    <input type="Button" id="submitData" name="submitData" class="registerbtn col-12 btn btn-primary btn-block mb-4" onClick="this.value='Sending you a reset link..';this.disabled=true;" value="Reset Password">
+                                </div>
+                                <!-- <p class="text-center"> Don't have account yet?<a href="register.php" class="text-primary"> Sign up</a></p> -->
+                            </form>
                         </div>
-                        <!-- Submit button -->
-                        <div class="col-md-12">
-                            <input type="Button" id="submitData" name="submitData" class="registerbtn col-12 btn btn-primary btn-block mb-4" onClick="this.value='Submitting..';this.disabled=true;" value="Sign In">
-                        </div>
-                        <!-- <p class="text-center"> Don't have account yet?<a href="register.php" class="text-primary"> Sign up</a></p> -->
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!--=============Login End=============-->
     <?php
@@ -128,83 +119,44 @@
 </html>
 
 <script type="module">
-    // Import the functions you need from the SDKs you need
+    let submitData = document.getElementById("submitData");
+    let forgetEmail = document.querySelector(".resetEmail");
+
     import {
-        initializeApp
-    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        app
+    } from "./firebase-config.js";
     import {
         getAuth,
-        createUserWithEmailAndPassword,
-        signInWithEmailAndPassword,
-        signOut
+        sendPasswordResetEmail
     } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-    import {
-        getDatabase,
-        set,
-        ref,
-        update
-    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
-
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyCEMpGBVy_7Hq4unG37cg0aglUZ1zPj3Rw",
-        authDomain: "mirkuz-home-care.firebaseapp.com",
-        databaseURL: "https://mirkuz-home-care-default-rtdb.firebaseio.com",
-        projectId: "mirkuz-home-care",
-        storageBucket: "mirkuz-home-care.appspot.com",
-        messagingSenderId: "466124354657",
-        appId: "1:466124354657:web:8a2585f80e38b1076f2620",
-        measurementId: "G-1FEDHCRYKJ"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-    const database = getDatabase(app);
+    const auth = getAuth(app);
 
     submitData.addEventListener('click', (e) => {
+        sendPasswordResetEmail(auth, forgetEmail.value)
+            .then(() => {
+                forgetEmail = "";
 
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('psw').value;
-
-        // log in user
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                // ...
-
-                // save log in details into real time database
-                var lgDate = new Date();
-                update(ref(database, 'users/' + user.uid), {
-                        last_login: lgDate,
-                    })
-                    .then(() => {
-                        // Data saved successfully!
-                        location.replace("display.php");
-                        //alert('user logged in successfully');
-
-                    })
-                    .catch((error) => {
-                        // The write failed...
-                        alert(error);
-                    });
+                
+                swal({
+                    title: "Congratulations!",
+                    text: "Your Password has been reset! Please check your email",
+                    icon: "success",
+                    button: "Ok",
+                });
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorMessage);
-            });
 
-        //sign out user
-        signOut(auth).then(() => {
-            // Sign-out successful.
-        }).catch((error) => {
-            // An error happened.
-        });
-    });
+
+                swal({
+                    title: "Sorry!",
+                    text: "Couldn't find your email address! Please enter a registered email!",
+                    icon: "error",
+                    button: "Ok",
+                });
+            });
+    })
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

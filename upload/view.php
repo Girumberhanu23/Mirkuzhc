@@ -30,6 +30,8 @@ if (isset($_POST['delete_license'])) {
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -65,10 +67,10 @@ if (isset($_POST['delete_license'])) {
         <!--Navbar Start-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-            <a class="navbar-brand" href="../index.php">
-                        <img src="../img/Logo.png" alt="" width="90px" height="90px">
-                        &nbsp;<strong>Mirkuz hc</strong>
-                    </a>
+                <a class="navbar-brand" href="../index.php">
+                    <img src="../img/Logo.png" alt="" width="90px" height="90px">
+                    &nbsp;<strong>Mirkuz hc</strong>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
@@ -83,8 +85,8 @@ if (isset($_POST['delete_license'])) {
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login.php">
-                                <i class="bi bi-person "></i>
+                            <a class="nav-link" href="../login.php">
+                                <i class="bi bi-person "></i>Logout
                             </a>
                         </li>
                     </ul>
@@ -95,7 +97,8 @@ if (isset($_POST['delete_license'])) {
     </header>
     <!--=============Header End=============-->
     <div>
-        <!--<center><h1>Welcome <?php // echo $_SESSION["username"]; ?></h1></center> -->
+        <!--<center><h1>Welcome <?php // echo $_SESSION["username"]; 
+                                ?></h1></center> -->
     </div>
     <div class="container">
         <div class="row">
@@ -144,7 +147,8 @@ if (isset($_POST['delete_license'])) {
                                             <td><?= $row->id; ?></td>
                                             <td><?= $row->name; ?></td>
                                             <td class="text-center w-25"><img class="card-img-top img-thumbnail w-50" src="uploads/<?= $row->image_url; ?>" alt="Nurse License Image"></td>
-                                            <!-- <td><a name="edit_license" class="btn btn-warning" href="edit_nurse.php?id=<?//= $row->id; ?>">Edit</a></td> -->
+                                            <!-- <td><a name="edit_license" class="btn btn-warning" href="edit_nurse.php?id=<? //= $row->id; 
+                                                                                                                            ?>">Edit</a></td> -->
                                             <td>
                                                 <form action="view.php" method="post">
                                                     <p class="mx-3"></p>

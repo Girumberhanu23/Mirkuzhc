@@ -9,6 +9,7 @@ include('../conn.php');
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" type="x-icon" href="img/Logo.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,9 +57,9 @@ background-attachment:fixed !important;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
-                        <img src="../img/Logo.png" alt="" width="90px" height="90px">
-                        &nbsp;<strong>Mirkuz hc</strong>
-                    </a>
+                    <img src="../img/Logo.png" alt="" width="90px" height="90px">
+                    &nbsp;<strong>Mirkuz hc</strong>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list"></span>
                 </button>
@@ -82,8 +83,8 @@ background-attachment:fixed !important;">
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 action-menu">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">
-                                <i class="bi bi-person "></i>
+                            <a class="nav-link" href="../login.php">
+                                <i class="bi bi-person "></i>Logout
                             </a>
                         </li>
                     </ul>
@@ -118,30 +119,29 @@ background-attachment:fixed !important;">
                     </div>
                     <div class="card-body">
 
-                    <?php
-                    if(isset($_GET['id']))
-                    {
-                        $nurse_id = $_GET['id'];
+                        <?php
+                        if (isset($_GET['id'])) {
+                            $nurse_id = $_GET['id'];
 
-                        $query = "SELECT * FROM nurses WHERE id=:id";
+                            $query = "SELECT * FROM nurses WHERE id=:id";
 
-                        $statement = $conn -> prepare($query);
-                        $data= [ ':id' => $nurse_id ];
-                        $statement->execute($data);
+                            $statement = $conn->prepare($query);
+                            $data = [':id' => $nurse_id];
+                            $statement->execute($data);
 
-                        $result =$statement->fetch(PDO::FETCH_OBJ); // PDO::FETCH_ASSOC
+                            $result = $statement->fetch(PDO::FETCH_OBJ); // PDO::FETCH_ASSOC
 
-                    }
-                    ?>
+                        }
+                        ?>
                         <form action="view.php" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="student_id" value="<?=$result->id;?>">
+                            <input type="hidden" name="student_id" value="<?= $result->id; ?>">
                             <div class="mb-3">
                                 <label for="name">Full Name</label>
-                                <input type="text" name="name" id="name" value="<?=$result->name;?>" class="form-control" required>
+                                <input type="text" name="name" id="name" value="<?= $result->name; ?>" class="form-control" required>
                             </div>
                             <div class="mb-3">
                                 <label for="my_image">Attach license</label>
-                                <input type="file" name="my_image" value="<?=$result->image_url;?>" class="form-control" required>
+                                <input type="file" name="my_image" value="<?= $result->image_url; ?>" class="form-control" required>
                             </div>
                             <div class="mb-3">
                                 <input type="submit" name="update_nurse" value="Upload" class="form-control bg-primary text-white">
