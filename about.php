@@ -298,7 +298,7 @@
     <script>
         AOS.init({
             offset: 150,
-            duration: 1000
+            duration: 600
             
         });
     </script>
